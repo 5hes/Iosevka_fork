@@ -6,7 +6,7 @@ jobs:
 
   strategy:
       matrix:
-        fontName: ["Iosevka"]
+        fontName: ["Iosevka", "IosevkaAile"]
     
   steps:
   - name: cheakout
