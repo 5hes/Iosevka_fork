@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        fontName: ["Iosevka", "IosevkaAile"]
+        fontName: ["Iosevka"]
     
     steps:
       - name: checkout
@@ -41,6 +41,11 @@ jobs:
           npm install
           npm run build -- ttf-unhinted::IosevkaCustom
 
+      - name: Upload Iosevka fonts as artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: iosevka-fonts
+          path: ./dist/IosevkaCustom/TTF-Unhinted/*.ttf
 
   
 
