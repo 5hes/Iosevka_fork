@@ -45,7 +45,7 @@ exportGlyphNames = false
     capital-y = "straight-serifless"
     capital-z = "straight-serifless"
     a = "double-storey-serifless"
-    b = "toothless-rounded-serifless"
+    b = "toothed-serifless"
     c = "serifless"
     d = "toothed-serifless"
     e = "flat-crossbar"
@@ -132,7 +132,7 @@ exportGlyphNames = false
     guillemet = "straight"
     number-sign = "slanted"
     ampersand = "upper-open"
-    at = "threefold-solid-inner"
+    at = "compact"
     dollar = "open"
     cent = "through"
     percent = "rings-continuous-slash"
@@ -149,25 +149,20 @@ exportGlyphNames = false
     lig-double-arrow-bar = "without-notch"
     lig-single-arrow-bar = "without-notch"
 
-[buildPlans.IosevkaCustom.weights.Regular]
-shape = 400
-menu = 400
-css = 400
-
 [buildPlans.IosevkaCustom.weights.Medium]
 shape = 500
 menu = 500
 css = 500
 
-[buildPlans.IosevkaCustom.weights.SemiBold]
-shape = 600
-menu = 600
-css = 600
+[buildPlans.IosevkaCustom.widths.Normal]
+shape = 500
+menu = 5
+css = "normal"
 
-[buildPlans.IosevkaCustom.weights.Bold]
-shape = 700
-menu = 700
-css = 700
+[buildPlans.IosevkaCustom.widths.SemiCondensed]
+shape = 456
+menu = 4
+css = "semi-condensed"
 
 [buildPlans.IosevkaCustom.slopes.Upright]
 angle = 0
