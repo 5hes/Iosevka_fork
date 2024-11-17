@@ -8,7 +8,7 @@ on:
         description: "null"
         required: true
         type: boolean
-        
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,28 +18,28 @@ jobs:
         fontName: ["Iosevka", "IosevkaAile"]
     
     steps:
-    - name: checkout
-      uses: actions/checkout@v4
-      with:
-        path: iosevka
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          path: iosevka
 
-    - name: Use Node.js
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-        node-version: lts/*
+          node-version: lts/*
           
-    - name: Install ttfautohint
+      - name: Install ttfautohint
         shell: bash
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends ttfautohint
 
-    - name: start
-      shell: bash
-      working-directory: iosevka
-      run: |
-        npm install
-        npm run build -- ttf-unhinted::IosevkaCustom
+      - name: start
+        shell: bash
+        working-directory: iosevka
+        run: |
+          npm install
+          npm run build -- ttf-unhinted::IosevkaCustom
 
 
   
