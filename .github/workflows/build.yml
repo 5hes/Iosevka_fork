@@ -1,9 +1,10 @@
 name: build
-
 on:
+  push:
+  pull_request:
   workflow_dispatch:
     inputs:
-      environment:
+      release:
         description: "null"
         required: true
         type: boolean
@@ -13,25 +14,25 @@ jobs:
     runs-on: ubuntu-latest
 
   strategy:
-      matrix:
-        fontName: ["Iosevka", "IosevkaAile"]
+    matrix:
+      fontName: ["Iosevka", "IosevkaAile"]
     
   steps:
-  - name: cheakout
+  - name: checkout
     uses: actions/checkout@v4
     with:
       path: iosevka
 
   - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
+      uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
           
   - name: Install ttfautohint
-        shell: bash
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends ttfautohint
+      shell: bash
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y --no-install-recommends ttfautohint
 
   - name: start
     shell: bash
