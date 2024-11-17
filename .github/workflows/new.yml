@@ -1,0 +1,41 @@
+name: build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: "Set to true to deploy"
+        required: true
+        type: boolean
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        fontName: ["Iosevka", "IosevkaAile"]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Install ttfautohint
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ttfautohint
+
+      - name: Start build
+        shell: bash
+        working-directory: iosevka
+        run: |
+          npm install
+          npm run build -- ttf-unhinted::IosevkaCustom
