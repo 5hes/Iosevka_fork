@@ -2,7 +2,12 @@ name: build
 
 on:
   workflow_dispatch:
-    
+    inputs:
+      environment:
+        description: "null"
+        required: true
+        type: boolean
+        
 jobs:
   build:
     runs-on: ubuntu-latest
