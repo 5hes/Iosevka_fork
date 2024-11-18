@@ -154,15 +154,10 @@ shape = 500
 menu = 500
 css = 500
 
-[buildPlans.IosevkaCustom.widths.Normal]
-shape = 500
-menu = 5
-css = "normal"
-
-[buildPlans.IosevkaCustom.widths.SemiCondensed]
-shape = 456
-menu = 4
-css = "semi-condensed"
+[buildPlans.IosevkaCustom.widths.Condensed]
+shape = 416
+menu = 3
+css = "condensed"
 
 [buildPlans.IosevkaCustom.slopes.Upright]
 angle = 0
