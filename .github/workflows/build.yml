@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        fontName: ["IosevkaAile"]
+        fontName: ["Iosevka"]
     
     steps:
       - name: checkout
