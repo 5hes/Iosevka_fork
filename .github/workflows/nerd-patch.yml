@@ -41,4 +41,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: Iosevka-Nerd
-        path: NerdPatcher/Patcher/patched/*
+        path: NerdPatcher/Patcher/IosevkaCustomMediumSemiNerdFont-Extended.ttf
