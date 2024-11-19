@@ -1,0 +1,68 @@
+name: build and patch nerd
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: "build and patch nerd"
+        required: true
+        type: boolean
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        fontName: ["Iosevka"]
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+      with:
+        path: iosevka
+
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+          
+    - name: Install Depand
+      shell: bash
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y --no-install-recommends ttfautohint wget unzip fontforge python3-fontforge tree python3
+
+    - name: build
+      shell: bash
+      working-directory: iosevka
+      run: |
+        npm install
+        npm run build -- ttf::IosevkaCustom
+
+    - name: patch-nerd
+      shell: bash
+      run: |
+        cd iosevka/dist/IosevkaCustom/TTF/
+        wget -O Patcher.zip "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FontPatcher.zip"
+        unzip -x Patcher.zip && rm Patcher.zip
+        ./font-patcher -c *.ttf -o Patched
+        ls -ltrah
+        tree
+
+    - name: Upload Iosevka fonts as artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: iosevka-nerd-500weights
+        path: ./iosevka/dist/IosevkaCustom/TTF/Patched/*.ttf
+
+
+
+
+
+
+
+    
+    
