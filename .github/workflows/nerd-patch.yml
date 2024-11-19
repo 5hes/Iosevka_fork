@@ -22,7 +22,7 @@ jobs:
       shell: bash
       run: |
         sudo apt-get update
-        sudo apt-get install -y wget unzip fontforge python3-fontforge
+        sudo apt-get install -y wget unzip fontforge python3-fontforge tree
 
     - name: download font patcher
       shell: bash
@@ -34,6 +34,8 @@ jobs:
         cd Patcher
         wget -O font.ttf "https://github.com/5hes/Iosevka_fork/releases/download/v32.0.1/IosevkaCustom-SemiExtendedMedium.ttf"
         ./font-patcher font.ttf
+        ls -ltrah
+        tree
 
     - name: Upload
       uses: actions/upload-artifact@v4
