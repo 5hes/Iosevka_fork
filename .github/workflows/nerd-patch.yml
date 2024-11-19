@@ -29,11 +29,11 @@ jobs:
       run: |
         pwd && ls -lah
         mkdir NerdPatcher && cd NerdPatcher
-        wget "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FontPatcher.zip"
-        unzip -x NerdFontsSymbolsOnly.zip -d Patcher
+        wget -O NerdSymbol.zip "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FontPatcher.zip"
+        unzip -x NerdSymbol.zip -d Patcher
         cd Patcher
-        wget "https://github.com/5hes/Iosevka_fork/releases/download/v32.0.1/IosevkaCustom-SemiExtendedMedium.ttf"
-        ./font-patcher IosevkaCustom-SemiExtendedMedium.ttf
+        wget -O font.ttf "https://github.com/5hes/Iosevka_fork/releases/download/v32.0.1/IosevkaCustom-SemiExtendedMedium.ttf"
+        ./font-patcher font.ttf
 
     - name: Upload
       uses: actions/upload-artifact@v4
