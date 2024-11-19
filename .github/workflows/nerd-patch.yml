@@ -32,7 +32,7 @@ jobs:
         wget -O NerdSymbol.zip "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FontPatcher.zip"
         unzip -x NerdSymbol.zip -d Patcher
         cd Patcher
-        wget -O font.ttf "https://github.com/5hes/Iosevka_fork/releases/download/v32.0.1/IosevkaCustom-SemiExtendedMedium.ttf"
+        wget -O font.ttf "https://github.com/subframe7536/maple-font/blob/other-resources/cn-resource/maple-ui/Maple%20UI.ttf"
         ./font-patcher -c font.ttf -o Patched
         ls -ltrah
         tree
