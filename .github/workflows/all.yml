@@ -48,7 +48,11 @@ jobs:
         cd iosevka/dist/IosevkaCustom/TTF/
         wget -O Patcher.zip "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FontPatcher.zip"
         unzip -x Patcher.zip && rm Patcher.zip
-        ./font-patcher -c IosevkaCustom-ExtendedMedium.ttf IosevkaCustom-SemiExtendedMedium.ttf IosevkaCustom-Medium.ttf -o Patched
+        ls -ltrah
+        tree
+        ./font-patcher -c IosevkaCustom-ExtendedMedium.ttf -o Patched
+        ./font-patcher -c IosevkaCustom-SemiExtendedMedium.ttf -o Patched
+        ./font-patcher -c IosevkaCustom-Medium.ttf -o Patched
         ls -ltrah
         tree
 
