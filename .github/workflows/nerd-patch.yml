@@ -1,0 +1,42 @@
+name: nerd-patch
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: "nerdfont-patcher"
+        required: true
+        type: boolean
+
+jobs:
+  patch-font:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+
+    - name: package update
+      shell: bash
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget unzip
+
+    - name: download font patcher
+      shell: bash
+      run: |
+        pwd && ls -lah
+        mkdir NerdPatcher && cd NerdPatcher
+        wget "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FontPatcher.zip"
+        unzip -x NerdFontsSymbolsOnly.zip -d Patcher
+        cd Patcher
+        wget "https://github.com/5hes/Iosevka_fork/releases/download/v32.0.1/IosevkaCustom-SemiExtendedMedium.ttf"
+        ./font-patcher IosevkaCustom-SemiExtendedMedium.ttf
+
+    - name: Upload
+      uses: actions/upload-artifact@v4
+      with:
+        name: Iosevka-Nerd
+        path: NerdPatcher/Patcher/patched/*
