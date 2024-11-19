@@ -6,7 +6,7 @@ noCvSs = true
 exportGlyphNames = false
 
   [buildPlans.IosevkaCustom.variants]
-  inherits = "ss11"
+  inherits = "ss14"
 
     [buildPlans.IosevkaCustom.variants.design]
     one = "base"
@@ -15,7 +15,7 @@ exportGlyphNames = false
     four = "semi-open-non-crossing-serifless"
     five = "upright-flat-serifless"
     six = "closed-contour"
-    seven = "straight-serifed"
+    seven = "straight-serifless"
     eight = "two-circles"
     nine = "closed-contour"
     zero = "dotted"
@@ -28,19 +28,19 @@ exportGlyphNames = false
     capital-g = "toothless-rounded-serifless-hooked"
     capital-h = "serifless"
     capital-i = "serifed"
-    capital-j = "serifless"
+    capital-j = "flat-hook-serifed"
     capital-k = "symmetric-touching-serifless"
     capital-l = "serifless"
-    capital-m = "hanging-serifless"
+    capital-m = "flat-bottom-serifless"
     capital-n = "standard-serifless"
     capital-p = "closed-serifless"
     capital-q = "crossing"
     capital-r = "straight-serifless"
     capital-s = "serifless"
     capital-t = "serifless"
-    capital-u = "toothless-rounded-serifless"
+    capital-u = "toothed-serifless"
     capital-v = "straight-serifless"
-    capital-w = "straight-serifless"
+    capital-w = "straight-flat-top-serifless"
     capital-x = "straight-serifless"
     capital-y = "straight-serifless"
     capital-z = "straight-serifless"
@@ -60,10 +60,10 @@ exportGlyphNames = false
     n = "straight-serifless"
     p = "eared-serifless"
     q = "straight-serifless"
-    r = "compact-serifless"
+    r = "hookless-serifless"
     s = "serifless"
     t = "flat-hook-short-neck2"
-    u = "toothless-rounded-serifless"
+    u = "toothed-serifless"
     v = "straight-serifless"
     w = "straight-flat-top-serifless"
     x = "straight-serifless"
@@ -84,16 +84,16 @@ exportGlyphNames = false
     lower-iota = "serifed-flat-tailed"
     capital-lambda = "straight-serifless"
     lower-lambda = "straight-turn"
-    lower-mu = "toothless-rounded-serifless"
+    lower-mu = "toothed-serifless"
     lower-nu = "straight"
     lower-xi = "flat-top"
     lower-pi = "tailed"
     lower-tau = "flat-tailed"
     lower-upsilon = "straight-serifless"
-    lower-phi = "cursive"
+    lower-phi = "neo-hellenic"
     lower-chi = "straight-serifless"
     lower-psi = "flat-top-serifless"
-    cyrl-a = "double-storey-toothless-rounded"
+    cyrl-a = "double-storey-toothless-corner"
     cyrl-ve = "standard-serifless"
     cyrl-capital-zhe = "symmetric-connected"
     cyrl-zhe = "symmetric-connected"
@@ -106,11 +106,11 @@ exportGlyphNames = false
     cyrl-capital-en = "serifless"
     cyrl-en = "tailed-serifless"
     cyrl-capital-er = "closed-serifless"
-    cyrl-er = "earless-rounded-serifless"
-    cyrl-capital-u = "straight-serifless"
+    cyrl-er = "eared-serifless"
+    cyrl-capital-u = "straight-turn-serifless"
     cyrl-u = "straight-serifless"
     cyrl-ef = "serifless"
-    cyrl-che = "tailed"
+    cyrl-che = "standard"
     cyrl-yeri = "corner"
     cyrl-yery = "round-tailed"
     cyrl-capital-e = "serifless"
@@ -123,31 +123,34 @@ exportGlyphNames = false
     braille-dot = "round"
     tilde = "low"
     asterisk = "penta-low"
-    underscore = "high"
+    underscore = "above-baseline"
     caret = "medium"
     ascii-grave = "straight"
     ascii-single-quote = "straight"
-    paren = "flat-arc"
+    paren = "normal"
     brace = "curly-flat-boundary"
     guillemet = "straight"
     number-sign = "slanted"
     ampersand = "upper-open"
     at = "compact"
     dollar = "open"
-    cent = "through"
+    cent = "open"
     percent = "rings-continuous-slash"
-    bar = "natural-slope"
+    bar = "force-upright"
     question = "corner-flat-hooked"
     pilcrow = "high"
     partial-derivative = "straight-bar"
-    micro-sign = "toothed-serifless"
-    lig-ltgteq = "flat"
+    micro-sign = "toothless-rounded-serifless"
+    lig-ltgteq = "slanted"
     lig-neq = "more-slanted"
     lig-equal-chain = "without-notch"
     lig-hyphen-chain = "without-notch"
     lig-plus-chain = "without-notch"
     lig-double-arrow-bar = "without-notch"
     lig-single-arrow-bar = "without-notch"
+
+  [buildPlans.IosevkaCustom.ligations]
+  inherits = "dlig"
 
 [buildPlans.IosevkaCustom.weights.Medium]
 shape = 500
@@ -168,16 +171,6 @@ css = "expanded"
 shape = 548
 menu = 6
 css = "semi-expanded"
-
-[buildPlans.IosevkaCustom.widths.ExtraExtended]
-shape = 658
-menu = 8
-css = "extra-expanded"
-
-[buildPlans.IosevkaCustom.widths.UltraExtended]
-shape = 720
-menu = 9
-css = "ultra-expanded"
 
 [buildPlans.IosevkaCustom.slopes.Upright]
 angle = 0
