@@ -1,8 +1,6 @@
 name: build and patch nerd
 
 on:
-  push:
-  pull_request:
   workflow_dispatch:
     inputs:
       release:
@@ -50,7 +48,7 @@ jobs:
         unzip -x Patcher.zip && rm Patcher.zip
         ls -ltrah
         tree
-        ./font-patcher -c IosevkaCustom-SemiExtendedMedium.ttf -o Patched
+        ./font-patcher -c IosevkaCustom-Medium.ttf -o Patched
         ls -ltrah
         tree
 
