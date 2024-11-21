@@ -1,6 +1,6 @@
 [buildPlans.IosevkaCustom]
 family = "Iosevka Custom"
-spacing = "normal"
+spacing = "fontconfig-mono"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
@@ -131,7 +131,7 @@ exportGlyphNames = false
     brace = "curly-flat-boundary"
     guillemet = "straight"
     number-sign = "slanted-open"
-    ampersand = "et-tailed"
+    ampersand = "upper-open"
     at = "compact"
     dollar = "open"
     cent = "open"
@@ -158,11 +158,6 @@ css = 500
 shape = 500
 menu = 5
 css = "normal"
-
-[buildPlans.IosevkaCustom.widths.SemiExtended]
-shape = 548
-menu = 6
-css = "semi-expanded"
 
 [buildPlans.IosevkaCustom.slopes.Upright]
 angle = 0
