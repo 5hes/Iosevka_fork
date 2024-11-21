@@ -1,6 +1,8 @@
 name: build and patch nerd
 
 on:
+  push:
+  pull_request:
   workflow_dispatch:
     inputs:
       release:
