@@ -1,6 +1,6 @@
 [buildPlans.IosevkaCustom]
 family = "Iosevka Custom"
-spacing = "fontconfig-mono"
+spacing = "normal"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
@@ -62,7 +62,7 @@ exportGlyphNames = false
     q = "straight-serifless"
     r = "hookless-serifless"
     s = "serifless"
-    t = "flat-hook-short-neck2"
+    t = "flat-hook-short-neck"
     u = "toothed-serifless"
     v = "straight-serifless"
     w = "straight-flat-top-serifless"
