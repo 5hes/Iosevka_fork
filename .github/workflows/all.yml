@@ -1,8 +1,6 @@
 name: build and patch nerd
 
 on:
-  push:
-  pull_request:
   workflow_dispatch:
     inputs:
       release:
@@ -57,7 +55,7 @@ jobs:
     - name: Upload Iosevka fonts as artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: new-JetBrain
+        name: ultra-jb
         path: ./iosevka/dist/IosevkaCustom/TTF/Patched/*.ttf
 
 
