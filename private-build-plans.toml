@@ -44,7 +44,7 @@ exportGlyphNames = false
     capital-x = "straight-serifless"
     capital-y = "straight-serifless"
     capital-z = "straight-serifless"
-    a = "double-storey-serifless"
+    a = "single-storey-serifless"
     b = "toothed-serifless"
     c = "serifless"
     d = "toothed-serifless"
@@ -56,8 +56,8 @@ exportGlyphNames = false
     j = "flat-hook-serifed"
     k = "symmetric-touching-serifless"
     l = "serifed-flat-tailed"
-    m = "earless-corner-double-arch-short-leg-serifless"
-    n = "earless-rounded-straight-serifless"
+    m = "earless-rounded-double-arch-short-leg-serifless"
+    n = "straight-serifless"
     p = "eared-serifless"
     q = "straight-serifless"
     r = "hookless-serifless"
@@ -150,13 +150,13 @@ exportGlyphNames = false
     lig-single-arrow-bar = "without-notch"
 
 [buildPlans.IosevkaCustom.weights.Medium]
-shape = 500
-menu = 500
-css = 500
+shape = 548
+menu = 548
+css = 548
 
 [buildPlans.IosevkaCustom.widths.SemiExtended]
 shape = 548
-menu = 6
+menu = 7
 css = "semi-expanded"
 
 [buildPlans.IosevkaCustom.slopes.Upright]
