@@ -4,7 +4,6 @@ spacing = "fontconfig-mono"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
-buildTextureFeature = true
 
   [buildPlans.IosevkaCustom.variants]
   inherits = "ss14"
