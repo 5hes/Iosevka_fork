@@ -156,7 +156,7 @@ css = 520
 
 [buildPlans.IosevkaCustom.widths.Normal]
 shape = 548
-menu = 100
+menu = 1
 css = "normal"
 
 [buildPlans.IosevkaCustom.slopes.Upright]
