@@ -38,25 +38,33 @@ jobs:
       working-directory: iosevka
       run: |
         npm install
-        npm run build -- ttf-unhinted::IosevkaCustom
+        npm run build -- ttf::IosevkaCustom
 
-    - name: patch-nerd
+    - name: patch-nerd-hinted
+      shell: bash
+      run: |
+        cd iosevka/dist/IosevkaCustom/TTF/
+        wget -O Patcher.zip "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FontPatcher.zip"
+        unzip -x Patcher.zip && rm Patcher.zip
+        ./font-patcher -c IosevkaCustom-Regular.ttf -o Patched
+        tree
+
+    - name: patch-nerd-unhinted
       shell: bash
       run: |
         cd iosevka/dist/IosevkaCustom/TTF-Unhinted/
         wget -O Patcher.zip "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FontPatcher.zip"
         unzip -x Patcher.zip && rm Patcher.zip
-        ls -ltrah
-        tree
         ./font-patcher -c IosevkaCustom-Regular.ttf -o Patched
-        ls -ltrah
         tree
 
     - name: Upload Iosevka fonts as artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: jb-500-monoterm
-        path: ./iosevka/dist/IosevkaCustom/TTF-Unhinted/Patched/*.ttf
+        name: jb-400-monoterm
+        path: |
+          ./iosevka/dist/IosevkaCustom/TTF/Patched/*.ttf
+          ./iosevka/dist/IosevkaCustom/TTF-Unhinted/Patched/*.ttf
 
 
 
