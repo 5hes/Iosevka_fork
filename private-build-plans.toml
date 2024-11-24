@@ -151,8 +151,8 @@ exportGlyphNames = false
 
 [buildPlans.IosevkaCustom.ligations]
 inherits = "dlig"
-disables = ["trig", "ltgt-diamond", "ltgt-slash-tag", "brack-bar", "brace-bar"]
-enables  = [ ]
+disables = ["trig", "ltgt-diamond-tag", "ltgt-slash-tag", "brack-bar", "brace-bar"]
+enables  = ["kern-bars"]
 
 [buildPlans.IosevkaCustom.weights.Regular]
 shape = 400
