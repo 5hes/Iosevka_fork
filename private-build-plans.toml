@@ -1,9 +1,10 @@
 [buildPlans.IosevkaCustom]
 family = "Iosevka Custom"
-spacing = "fontconfig-mono"
+spacing = "fixed"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
+noLigation = true
 
   [buildPlans.IosevkaCustom.variants]
   inherits = "ss14"
@@ -18,7 +19,7 @@ exportGlyphNames = false
     seven = "straight-serifless"
     eight = "two-circles"
     nine = "closed-contour"
-    zero = "slashed"
+    zero = "dotted"
     capital-a = "straight-serifless"
     capital-b = "standard-serifless"
     capital-c = "serifless"
@@ -148,11 +149,6 @@ exportGlyphNames = false
     lig-plus-chain = "without-notch"
     lig-double-arrow-bar = "without-notch"
     lig-single-arrow-bar = "without-notch"
-
-[buildPlans.IosevkaCustom.ligations]
-inherits = "dlig"
-disables = ["trig", "ltgt-diamond-tag", "ltgt-slash-tag", "brack-bar", "brace-bar"]
-enables  = []
 
 [buildPlans.IosevkaCustom.weights.Regular]
 shape = 400
