@@ -1,10 +1,9 @@
 [buildPlans.IosevkaCustom]
 family = "Iosevka Custom"
-spacing = "fixed"
+spacing = "normal"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
-noLigation = true
 
   [buildPlans.IosevkaCustom.variants]
   inherits = "ss14"
@@ -149,6 +148,11 @@ noLigation = true
     lig-plus-chain = "without-notch"
     lig-double-arrow-bar = "without-notch"
     lig-single-arrow-bar = "without-notch"
+
+[buildPlans.IosevkaCustom.ligations]
+inherits = "dlig"
+disables = []
+enables  = []
 
 [buildPlans.IosevkaCustom.weights.Regular]
 shape = 400
