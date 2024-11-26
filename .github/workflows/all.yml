@@ -76,7 +76,7 @@ jobs:
     - name: Rename
       shell: bash
       run: |
-        cd iosevka/dist/IosevkaCustom/TTF-Unhinted/
+        cd iosevka/dist/IosevkaCustom/TTF-Unhinted/Patched
         mv IosevkaCustomNerdFont-Regular.ttf IosevkaCustomNerdFont-Regular-Unhinted.ttf
         
     - name: Release
