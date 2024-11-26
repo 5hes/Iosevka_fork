@@ -70,8 +70,17 @@ jobs:
       with:
         name: jb-400-hinted
         path: ./iosevka/dist/IosevkaCustom/TTF/Patched/*.ttf
-
-
+        
+    - name: Release
+      uses: xresloader/upload-to-github-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        file: |
+          iosevka/dist/IosevkaCustom/TTF/Patched/*.ttf
+          iosevka/dist/IosevkaCustom/TTF-Unhinted/Patched/*.ttf
+        tags: false
+        draft: false
 
 
 
