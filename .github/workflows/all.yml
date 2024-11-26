@@ -72,6 +72,11 @@ jobs:
       with:
         name: jb-400-hinted
         path: ./iosevka/dist/IosevkaCustom/TTF/Patched/*.ttf
+
+    - name: Rename
+      shell: bash
+      run: |
+        mv iosevka/dist/IosevkaCustom/TTF-Unhinted/Patched/Patched/IosevkaCustomNerdFont-Regular.ttf iosevka/dist/IosevkaCustom/TTF-Unhinted/Patched/Patched/IosevkaCustomNerdFont-Regular-Unhinted.ttf
         
     - name: Release
       uses: xresloader/upload-to-github-release@v1
@@ -79,8 +84,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         file: |
-          iosevka/dist/IosevkaCustom/TTF/Patched/*.ttf
-          iosevka/dist/IosevkaCustom/TTF-Unhinted/Patched/*.ttf
+          iosevka/dist/IosevkaCustom/TTF/Patched/IosevkaCustomNerdFont-Regular.ttf
+          iosevka/dist/IosevkaCustom/TTF-Unhinted/Patched/Patched/IosevkaCustomNerdFont-Regular-Unhinted.ttf
         tags: false
         draft: false
 
