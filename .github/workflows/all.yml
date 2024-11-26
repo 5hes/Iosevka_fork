@@ -86,7 +86,7 @@ jobs:
       with:
         file: |
           iosevka/dist/IosevkaCustom/TTF/Patched/IosevkaCustomNerdFont-Regular.ttf
-          iosevka/dist/IosevkaCustom/TTF-Unhinted/Patched/Patched/IosevkaCustomNerdFont-Regular-Unhinted.ttf
+          iosevka/dist/IosevkaCustom/TTF-Unhinted/Patched/IosevkaCustomNerdFont-Regular-Unhinted.ttf
         tags: false
         draft: false
 
