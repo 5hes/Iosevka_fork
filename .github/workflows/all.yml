@@ -1,8 +1,6 @@
 name: build-nerdpatch
 
 on:
-  push:
-  pull_request:
   workflow_dispatch:
     inputs:
       release:
@@ -41,7 +39,16 @@ jobs:
       run: |
         npm install
         npm audit fix
-        npm run build -- ttf-unhinted::IosevkaCustom
+        npm run build -- ttf::IosevkaCustom
+
+    - name: patch-nerd-hint
+      shell: bash
+      run: |
+        cd iosevka/dist/IosevkaCustom/TTF/
+        wget -O Patcher.zip "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FontPatcher.zip"
+        unzip -x Patcher.zip && rm Patcher.zip
+        ./font-patcher -c IosevkaCustom-Regular.ttf -o Patched
+        tree
 
     - name: patch-nerd-unhinted
       shell: bash
@@ -55,8 +62,14 @@ jobs:
     - name: Upload Iosevka fonts as artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: jb-400-monoterm
+        name: jb-400-unhinted
         path: ./iosevka/dist/IosevkaCustom/TTF-Unhinted/Patched/*.ttf
+
+    - name: Upload Iosevka fonts as artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: jb-400-hinted
+        path: ./iosevka/dist/IosevkaCustom/TTF/Patched/*.ttf
 
 
 
