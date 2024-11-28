@@ -1,0 +1,80 @@
+name: build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: "build"
+        required: true
+        type: boolean
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        fontName: ["Iosevka"]
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+      with:
+        path: iosevka
+
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+          
+    - name: Install Depand
+      shell: bash
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y --no-install-recommends ttfautohint
+
+    - name: build
+      shell: bash
+      working-directory: iosevka
+      run: |
+        npm install
+        npm audit fix
+        npm run build -- ttf::IosevkaCustom
+
+    - name: Upload Iosevka fonts as artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: jb-400-unhinted
+        path: ./iosevka/dist/IosevkaCustom/TTF-Unhinted/*.ttf
+
+    - name: Upload Iosevka fonts as artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: jb-400-hinted
+        path: ./iosevka/dist/IosevkaCustom/TTF/*.ttf
+
+    - name: Rename
+      shell: bash
+      run: |
+        cd iosevka/dist/IosevkaCustom/TTF-Unhinted/
+        mv IosevkaCustom-Regular.ttf IosevkaCustom-Regular-Unhinted.ttf
+        
+    - name: Release
+      uses: xresloader/upload-to-github-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        file: |
+          ./iosevka/dist/IosevkaCustom/TTF/IosevkaCustom-Regular.ttf
+          ./iosevka/dist/IosevkaCustom/TTF-Unhinted/IosevkaCustom-Regular-Unhinted.ttf
+        tags: false
+        draft: false
+
+
+
+
+
+    
+    
