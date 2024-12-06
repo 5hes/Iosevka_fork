@@ -27,9 +27,9 @@ jobs:
     - name: Create a new tag
       id: create_tag
       run: |
-        TAG_NAME="v0.0.0.0"  # 这里设置你想要的标签名
-        git tag $TAG_NAME
-        git push origin $TAG_NAME
+        # TAG_NAME="v0.0.0.0"  # 这里设置你想要的标签名
+        # git tag $TAG_NAME
+        # git push origin $TAG_NAME
 
 
     - name: Use Node.js
@@ -87,6 +87,8 @@ jobs:
         cd iosevka/dist/IosevkaCustom/TTF-Unhinted/Patched
         mv IosevkaCustom-Regular.ttf IosevkaCustom-Regular-Unhinted.ttf
         mv IosevkaCustom-Medium.ttf IosevkaCustom-Medium-Unhinted.ttf
+        pwd
+        ls -ltrah
         
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v2
