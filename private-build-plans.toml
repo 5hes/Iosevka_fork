@@ -30,7 +30,7 @@ noLigation = true
     capital-h = "serifless"
     capital-i = "serifed"
     capital-j = "flat-hook-serifless"
-    capital-k = "symmetric-touching-serifless"
+    capital-k = "symmetric-connected-serifless"
     capital-l = "serifless"
     capital-m = "hanging-serifless"
     capital-n = "standard-serifless"
@@ -55,7 +55,7 @@ noLigation = true
     h = "straight-serifless"
     i = "serifed-flat-tailed"
     j = "flat-hook-serifed"
-    k = "symmetric-touching-serifless"
+    k = "symmetric-connected-serifless"
     l = "serifed-flat-tailed"
     m = "short-leg-serifless"
     n = "straight-serifless"
@@ -154,6 +154,11 @@ noLigation = true
 shape = 400
 menu = 400
 css = 400
+
+[buildPlans.IosevkaCustom.weights.Medium]
+shape = 500
+menu = 500
+css = 500
 
 [buildPlans.IosevkaCustom.widths.Normal]
 shape = 500
