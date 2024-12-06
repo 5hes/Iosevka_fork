@@ -102,7 +102,7 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          ./iosveka/dist/IosevkaCustom/TTF-Unhinted/IosevkaCustom-Regular-Unhinted.ttf
+          ./iosevka/dist/IosevkaCustom/TTF-Unhinted/IosevkaCustom-Regular-Unhinted.ttf
           ./iosevka/dist/IosevkaCustom/TTF-Unhinted/IosevkaCustom-Medium-Unhinted.ttf
           ./iosevka/dist/IosevkaCustom/TTF/IosevkaCustom-Medium.ttf
           ./iosevka/dist/IosevkaCustom/TTF/IosevkaCustom-Regular.ttf
