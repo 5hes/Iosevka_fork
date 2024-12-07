@@ -1,6 +1,8 @@
-name: build-nerdpatch
+name: build-nerdpatch-release
 
 on:
+  push:
+  pull_request:
   workflow_dispatch:
     inputs:
       release:
@@ -9,7 +11,7 @@ on:
         type: boolean
 
 jobs:
-  build-nerdpatch:
+  release:
     runs-on: ubuntu-latest
 
     strategy:
