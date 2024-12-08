@@ -1,4 +1,4 @@
-name: build-nerdpatch-release
+name: build-release
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       release:
-        description: "build-nerdpatch"
+        description: "build"
         required: true
         type: boolean
 
@@ -28,7 +28,7 @@ jobs:
       id: create_tag
       run: |
         cd iosevka
-        TAG_NAME="v0.0.0.4"  # 这里设置你想要的标签名
+        TAG_NAME="v0.0.0.5"  # 这里设置你想要的标签名
         git tag $TAG_NAME
         git push origin $TAG_NAME
 
@@ -50,7 +50,7 @@ jobs:
       run: |
         npm install
         npm audit fix
-        npm run build -- ttf::IosevkaCustom
+        npm run build -- ttf::Iovevka
 
 #    - name: patch-nerd-hint
 #      shell: bash
@@ -73,29 +73,29 @@ jobs:
     - name: Upload Iosevka fonts as artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: jb-400-unhinted
-        path: ./iosevka/dist/IosevkaCustom/TTF-Unhinted/*.ttf
+        name: Iovevka-400-unhinted
+        path: ./iosevka/dist/Iovevka/TTF-Unhinted/*.ttf
 
     - name: Upload Iosevka fonts as artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: jb-400-hinted
-        path: ./iosevka/dist/IosevkaCustom/TTF/*.ttf
+        name: Iovevka-400-hinted
+        path: ./iosevka/dist/Iovevka/TTF/*.ttf
 
     - name: Rename
       shell: bash
       run: |
-        cd iosevka/dist/IosevkaCustom/TTF-Unhinted/
-        mv IosevkaCustom-Regular.ttf IosevkaCustom-Regular-Unhinted.ttf
-        mv IosevkaCustom-Medium.ttf IosevkaCustom-Medium-Unhinted.ttf
+        cd iosevka/dist/Iovevka/TTF-Unhinted/
+        mv Iovevka-Regular.ttf Iovevka-Regular-Unhinted.ttf
+        mv Iovevka-Medium.ttf Iovevka-Medium-Unhinted.ttf
         pwd
         ls -ltrah
         
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: v0.0.0.4  # 使用创建的标签
-        name: love-3.1
+        tag_name: v0.0.0.5  # 使用创建的标签
+        name: love-3.1(rename)
         #tag_name: ${{ github.ref }}
         #name: ${{ github.ref }}
         #body: TODO New Release.
@@ -103,10 +103,10 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          ./iosevka/dist/IosevkaCustom/TTF-Unhinted/IosevkaCustom-Regular-Unhinted.ttf
-          ./iosevka/dist/IosevkaCustom/TTF-Unhinted/IosevkaCustom-Medium-Unhinted.ttf
-          ./iosevka/dist/IosevkaCustom/TTF/IosevkaCustom-Medium.ttf
-          ./iosevka/dist/IosevkaCustom/TTF/IosevkaCustom-Regular.ttf
+          ./iosevka/dist/Iovevka/TTF-Unhinted/IosevkaCustom-Regular-Unhinted.ttf
+          ./iosevka/dist/Iovevka/TTF-Unhinted/IosevkaCustom-Medium-Unhinted.ttf
+          ./iosevka/dist/Iovevka/TTF/IosevkaCustom-Medium.ttf
+          ./iosevka/dist/Iovevka/TTF/IosevkaCustom-Regular.ttf
 
 
 
