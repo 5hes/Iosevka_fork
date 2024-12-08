@@ -1,6 +1,6 @@
 [buildPlans.Iovevka]
 family = "Iovevka"
-spacing = "fontconfig-mono"
+spacing = "normal"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
