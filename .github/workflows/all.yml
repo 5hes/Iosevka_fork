@@ -28,9 +28,9 @@ jobs:
       id: create_tag
       run: |
         cd iosevka
-        # TAG_NAME="v0.0.0.6"  # 这里设置你想要的标签名
-        # git tag $TAG_NAME
-        # git push origin $TAG_NAME
+        TAG_NAME="v0.0.0.7"  # 这里设置你想要的标签名
+        git tag $TAG_NAME
+        git push origin $TAG_NAME
 
 
     - name: Use Node.js
@@ -94,8 +94,8 @@ jobs:
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: v0.0.0.5  # 使用创建的标签
-        name: love-3.1(rename)
+        tag_name: v0.0.0.7  # 使用创建的标签
+        name: love-3.1-fixed
         #tag_name: ${{ github.ref }}
         #name: ${{ github.ref }}
         #body: TODO New Release.
