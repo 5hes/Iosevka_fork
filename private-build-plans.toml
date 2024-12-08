@@ -1,6 +1,6 @@
 [buildPlans.Iovevka]
 family = "Iovevka"
-spacing = "normal"
+spacing = "fixed"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
