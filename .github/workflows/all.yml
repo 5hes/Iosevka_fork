@@ -28,9 +28,9 @@ jobs:
       id: create_tag
       run: |
         cd iosevka
-        TAG_NAME="v0.0.0.6"  # 这里设置你想要的标签名
-        git tag $TAG_NAME
-        git push origin $TAG_NAME
+        # TAG_NAME="v0.0.0.6"  # 这里设置你想要的标签名
+        # git tag $TAG_NAME
+        # git push origin $TAG_NAME
 
 
     - name: Use Node.js
@@ -103,10 +103,10 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          ./iosevka/dist/Iovevka/TTF-Unhinted/IosevkaCustom-Regular-Unhinted.ttf
-          ./iosevka/dist/Iovevka/TTF-Unhinted/IosevkaCustom-Medium-Unhinted.ttf
-          ./iosevka/dist/Iovevka/TTF/IosevkaCustom-Medium.ttf
-          ./iosevka/dist/Iovevka/TTF/IosevkaCustom-Regular.ttf
+          ./iosevka/dist/Iovevka/TTF-Unhinted/Iovevka-Regular-Unhinted.ttf
+          ./iosevka/dist/Iovevka/TTF-Unhinted/Iovevka-Medium-Unhinted.ttf
+          ./iosevka/dist/Iovevka/TTF/Iovevka-Medium.ttf
+          ./iosevka/dist/Iovevka/TTF/Iovevka-Regular.ttf
 
 
 
