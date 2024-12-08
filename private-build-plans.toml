@@ -1,6 +1,6 @@
 [buildPlans.Iovevka]
 family = "Iovevka"
-spacing = "fixed"
+spacing = "fontconfig-mono"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
@@ -117,7 +117,7 @@ cyrl-capital-ya = "straight-serifless"
 cyrl-ya = "straight-serifless"
 tittle = "round"
 diacritic-dot = "round"
-punctuation-dot = "round"
+punctuation-dot = "square"
 braille-dot = "round"
 tilde = "low"
 asterisk = "penta-low"
