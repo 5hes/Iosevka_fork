@@ -94,8 +94,8 @@ jobs:
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: v0.0.0.6  # 使用创建的标签
-        name: love-3.1-fontconfigMono(rename)
+        tag_name: v0.0.0.5  # 使用创建的标签
+        name: love-3.1(rename)
         #tag_name: ${{ github.ref }}
         #name: ${{ github.ref }}
         #body: TODO New Release.
