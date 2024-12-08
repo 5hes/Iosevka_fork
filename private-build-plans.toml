@@ -1,12 +1,12 @@
-[buildPlans.IosevkaCustom]
-family = "Iosevka Custom"
+[buildPlans.Iovevka]
+family = "Iovevka"
 spacing = "normal"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
 noLigation = true
 
-[buildPlans.IosevkaCustom.variants.design]
+[buildPlans.Iovevka.variants.design]
 one = "base-long-top-serif"
 two = "straight-neck-serifless"
 three = "two-arcs"
@@ -147,22 +147,22 @@ lig-plus-chain = "without-notch"
 lig-double-arrow-bar = "without-notch"
 lig-single-arrow-bar = "without-notch"
 
-[buildPlans.IosevkaCustom.weights.Regular]
+[buildPlans.Iovevka.weights.Regular]
 shape = 400
 menu = 400
 css = 400
 
-[buildPlans.IosevkaCustom.weights.Medium]
+[buildPlans.Iovevka.weights.Medium]
 shape = 500
 menu = 500
 css = 500
 
-[buildPlans.IosevkaCustom.widths.Normal]
+[buildPlans.Iovevka.widths.Normal]
 shape = 500
 menu = 5
 css = "normal"
 
-[buildPlans.IosevkaCustom.slopes.Upright]
+[buildPlans.Iovevka.slopes.Upright]
 angle = 0
 shape = "upright"
 menu = "upright"
