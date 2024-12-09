@@ -146,6 +146,9 @@ lig-plus-chain = "without-notch"
 lig-double-arrow-bar = "without-notch"
 lig-single-arrow-bar = "without-notch"
 
+  [buildPlans.Iovevka.ligations]
+  inherits = "dlig"
+
 [buildPlans.Iovevka.weights.Regular]
 shape = 400
 menu = 400
