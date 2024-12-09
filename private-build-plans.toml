@@ -4,7 +4,6 @@ spacing = "fontconfig-mono"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
-noLigation = true
 
 [buildPlans.Iovevka.variants.design]
 one = "base-long-top-serif"
