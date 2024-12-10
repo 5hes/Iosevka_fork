@@ -1,6 +1,8 @@
 name: build-release
 
 on:
+  push:
+  pull_request:
   workflow_dispatch:
     inputs:
       release:
@@ -93,10 +95,10 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         tag_name: v0.0.1.5 # 使用创建的标签
-        name: love-3.9alpha
+        name: love-3.9alpha-1
         #tag_name: ${{ github.ref }}
         #name: ${{ github.ref }}
-        body: 精简大量没必要的配置
+        # body: 精简大量没必要的配置
         #body_path: CHANGELOG.txt
         draft: false
         prerelease: false
