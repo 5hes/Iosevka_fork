@@ -86,8 +86,7 @@ jobs:
       shell: bash
       run: |
         cd iosevka/dist/Iovevka/TTF-Unhinted/
-        mv Iovevka-Regular.ttf Iovevka-Regular-Unhinted.ttf
-        mv Iovevka-Medium.ttf Iovevka-Medium-Unhinted.ttf
+        find . -name "*.ttf" -exec bash -c 'mv "\$0" "${0%.ttf}-Unhinted.ttf"' {} \;
         pwd
         ls -ltrah
         
@@ -103,10 +102,8 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          ./iosevka/dist/Iovevka/TTF-Unhinted/Iovevka-Regular-Unhinted.ttf
-          ./iosevka/dist/Iovevka/TTF-Unhinted/Iovevka-Medium-Unhinted.ttf
-          ./iosevka/dist/Iovevka/TTF/Iovevka-Medium.ttf
-          ./iosevka/dist/Iovevka/TTF/Iovevka-Regular.ttf
+          ./iosevka/dist/Iovevka/TTF-Unhinted/**
+          ./iosevka/dist/Iovevka/TTF/**
 
 
 
