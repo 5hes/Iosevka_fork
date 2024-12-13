@@ -90,7 +90,11 @@ jobs:
       shell: bash
       run: |
         cd iosevka/dist/Iovevka/TTF-Unhinted/
-        find . -name "*.ttf" -exec bash -c 'mv "\$0" "${0%.ttf}-Unhinted.ttf"' {} \;
+        echo 'for file in *.ttf; do' >> rename
+        echo '    mv "$file" "${file%.ttf}-Unhinted.ttf"' >> rename
+        echo 'done' >> rename
+        chmod +x rename
+        bash rename
         pwd
         ls -ltrah
         
