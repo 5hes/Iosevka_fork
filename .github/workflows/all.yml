@@ -1,8 +1,6 @@
 name: build-release
 
 on:
-  push:
-  pull_request:
   workflow_dispatch:
     inputs:
       release:
@@ -37,12 +35,16 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: latest
+
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.13'
           
     - name: Install Depand
       shell: bash
       run: |
         sudo apt-get update
-        sudo apt-get install -y --no-install-recommends ttfautohint wget unzip fontforge python3-fontforge tree python3
+        sudo apt-get install -y --no-install-recommends ttfautohint wget unzip fontforge python3-fontforge tree
 
     - name: build
       shell: bash
@@ -93,8 +95,8 @@ jobs:
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: v0.0.1.9
-        name: love-3.9alpha-test(l = "serifed-flat-tailed")
+        tag_name: v0.0.1.8
+        name: love-3.9alpha-test()
         #tag_name: ${{ github.ref }}
         #name: ${{ github.ref }}
         # body: 精简大量没必要的配置
