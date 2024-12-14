@@ -23,7 +23,7 @@ jobs:
     - name: Add Ubuntu GPG key
       run: |
         # 添加 Ubuntu 官方 GPG 密钥
-        curl -fsSL https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3B4FE6ACC0B21F32 | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/ubuntu.gpg
+        curl -fsSL http://archive.ubuntu.com/ubuntu/project/ubuntu-archive-keyring.gpg | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/ubuntu.gpg
         sudo apt-get update    
         sudo apt-get fontforge python3-fontforge
 
