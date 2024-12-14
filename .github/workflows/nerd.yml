@@ -29,7 +29,7 @@ jobs:
     - name: Update package repo
       run: |
         sudo apt-get update
-        sudo apt-get python3 fontforge python3-fontforge`
+        sudo apt-get python3 fontforge python3-fontforge
 
     - uses: actions/checkout@v4
     - run: |
