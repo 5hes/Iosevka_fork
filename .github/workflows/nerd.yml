@@ -1,0 +1,16 @@
+name: NerdFont patch
+
+on: workflow_dispatch
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+
+    steps:
+    - run: |
+        wget -O Patcher.zip "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FontPatcher.zip"
+        wget -O Iovevka-Cond.ttf
+        unzip -x Patcher.zip && rm Patcher.zip
+        ./font-patcher -c Iovevka-Cond.ttf -o Patched
+    - uses: actions/artifact@v4
+      with:
+        path: Patched
