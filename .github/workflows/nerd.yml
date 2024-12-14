@@ -9,27 +9,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Replace software sources
-      run: |
-        # 备份原有的 sources.list
-        sudo mv /etc/apt/sources.list /etc/apt/sources.list.backup
+      - name: Replace software sources
+        run: |
+          # 备份原有的 sources.list
+          sudo mv /etc/apt/sources.list /etc/apt/sources.list.backup
 
-        # 创建新的 sources.list，使用最新的软件源
-        echo "deb http://archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse" | sudo tee /etc/apt/sources.list
-        echo "deb http://archive.ubuntu.com/ubuntu/ focal-updates main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
-        echo "deb http://archive.ubuntu.com/ubuntu/ focal-security main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
-        echo "deb http://archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
-        echo "deb http://archive.ubuntu.com/ubuntu/ focal-proposed main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
+          # 创建新的 sources.list，使用 Ubuntu 24.04 的软件源
+          echo "deb http://archive.ubuntu.com/ubuntu/ lunar main restricted universe multiverse" | sudo tee /etc/apt/sources.list
+          echo "deb http://archive.ubuntu.com/ubuntu/ lunar-updates main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
+          echo "deb http://archive.ubuntu.com/ubuntu/ lunar-security main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
+          echo "deb http://archive.ubuntu.com/ubuntu/ lunar-backports main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
+          echo "deb http://archive.ubuntu.com/ubuntu/ lunar-proposed main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
 
-    - name: Add Ubuntu GPG key
-      run: |
-        # 添加 Ubuntu 的 GPG 密钥
-        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32  # Ubuntu GPG 密钥
-
-    - name: Update package repo
-      run: |
-        sudo apt-get update
-        sudo apt-get python3 fontforge python3-fontforge
+      - name: Add Ubuntu GPG key
+        run: |
+          # 添加 Ubuntu 24.04 的 GPG 密钥
+          sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32  # Ubuntu GPG 密钥
+          sudo apt-get update
+          apt search python
+          sudo apt-get python3 fontforge python3-fontforge
 
     - uses: actions/checkout@v4
     - run: |
