@@ -1,6 +1,7 @@
 name: NerdFont patch
 
 on:
+  push:
   workflow_dispatch:
   
 jobs:
@@ -8,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v4
     - run: |
         wget -O Patcher.zip "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FontPatcher.zip"
         wget -O Iovevka-Cond.ttf
