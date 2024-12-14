@@ -1,6 +1,7 @@
 name: NerdFont patch
 
-on: 
+on:
+  push:
   workflow_dispatch:
   
 jobs:
