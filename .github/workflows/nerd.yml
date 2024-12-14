@@ -9,25 +9,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Replace software sources
-        run: |
-          # 备份原有的 sources.list
-          sudo mv /etc/apt/sources.list /etc/apt/sources.list.backup
+    - name: Replace software sources with the latest
+      run: |
+        # 删除原有的软件源
+        sudo rm -f /etc/apt/sources.list
 
-          # 创建新的 sources.list，使用 Ubuntu 24.04 的软件源
-          echo "deb http://archive.ubuntu.com/ubuntu/ lunar main restricted universe multiverse" | sudo tee /etc/apt/sources.list
-          echo "deb http://archive.ubuntu.com/ubuntu/ lunar-updates main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
-          echo "deb http://archive.ubuntu.com/ubuntu/ lunar-security main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
-          echo "deb http://archive.ubuntu.com/ubuntu/ lunar-backports main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
-          echo "deb http://archive.ubuntu.com/ubuntu/ lunar-proposed main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
+        # 添加最新的 Ubuntu 24.04 (Noble Numbat) 官方软件源
+        echo "deb http://archive.ubuntu.com/ubuntu/ noble main restricted universe multiverse" | sudo tee /etc/apt/sources.list
+        echo "deb http://archive.ubuntu.com/ubuntu/ noble-updates main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
+        echo "deb http://archive.ubuntu.com/ubuntu/ noble-security main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
+        echo "deb http://archive.ubuntu.com/ubuntu/ noble-backports main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
 
-      - name: Add Ubuntu GPG key
-        run: |
-          # 添加 Ubuntu 24.04 的 GPG 密钥
-          sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32  # Ubuntu GPG 密钥
-          sudo apt-get update
-          apt search python
-          sudo apt-get python3 fontforge python3-fontforge
+    - name: Add Ubuntu GPG key
+      run: |
+        # 添加 Ubuntu 官方 GPG 密钥
+        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
+        sudo apt-get update
+        apt search python
+        sudo apt-get python3 fontforge python3-fontforge
 
     - uses: actions/checkout@v4
     - run: |
