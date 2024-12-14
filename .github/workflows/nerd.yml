@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v4
     - run: |
         wget -O Patcher.zip "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FontPatcher.zip"
-        wget -O Iovevka-Cond.ttf
+        wget -O Iovevka-Cond.ttf "https://github.com/5hes/Iosevka_fork/releases/download/v0.0.1.8/Iovevka-Condensed-Unhinted.ttf"
         unzip -x Patcher.zip && rm Patcher.zip
         ./font-patcher -c Iovevka-Cond.ttf -o Patched
     - uses: actions/upload-artifact@v4
