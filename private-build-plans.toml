@@ -4,7 +4,6 @@ spacing = "fontconfig-mono"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
-noLigation = true
 
 [buildPlans.Iovevka.variants.design]
 one = "base"
@@ -17,11 +16,13 @@ zero = "slashed-cutout"
 capital-g = "toothless-rounded-serifless-hooked"
 capital-j = "serifless"
 capital-k = "symmetric-connected-serifless"
+a = "double-storey-toothless-rounded"
 j = "serifless"
 k = "symmetric-connected-serifless"
 l = "zshaped"
 m = "earless-rounded-double-arch-serifless"
 n = "earless-rounded-straight-serifless"
+r = "earless-rounded-serifless"
 u = "toothless-corner-serifless"
 y = "straight-turn-serifless"
 capital-eszet = "rounded-serifless"
@@ -42,11 +43,6 @@ lig-hyphen-chain = "without-notch"
 shape = 400
 menu = 400
 css = 400
-
-[buildPlans.Iovevka.weights.Medium]
-shape = 500
-menu = 500
-css = 500
 
 [buildPlans.Iovevka.widths.Normal]
 shape = 500
