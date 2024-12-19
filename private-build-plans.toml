@@ -7,51 +7,36 @@ exportGlyphNames = false
 noLigation = true
 
 [buildPlans.Iovevka.variants.design]
-one = "base-long-top-serif"
+one = "base"
 two = "straight-neck-serifless"
-six = "closed-contour"
+six = "open-contour"
 seven = "bend-serifless"
 eight = "two-circles"
-nine = "closed-contour"
-zero = "tall-slashed"
+nine = "open-contour"
+zero = "slashed-cutout"
 capital-g = "toothless-rounded-serifless-hooked"
+capital-j = "serifless"
 capital-k = "symmetric-connected-serifless"
-f = "serifless-crossbar-at-x-height"
-# i = "zshaped" monaco
-# i = "hooky" source code
-# i = "serifed-asymmetric" 短一点
-# i = "serifed-flat-tailed" jetbrains
-# i = "serifless" 什么都没有
-# 弯的 i = "tailed-serifed"
+j = "serifless"
 k = "symmetric-connected-serifless"
-# l = "serifed-asymmetric"
-# l = "tailed-serifed" 
-# l = "serifed-flat-tailed"
-u = "toothless-rounded-serifless"
-w = "straight-flat-top-serifless"
+l = "zshaped"
+m = "earless-rounded-double-arch-serifless"
+n = "earless-rounded-straight-serifless"
+u = "toothless-corner-serifless"
+y = "straight-turn-serifless"
 capital-eszet = "rounded-serifless"
-eszet = "traditional-descending-serifless"
-# lower-iota = "zshaped"
-lower-iota = "serifed-flat-tailed"
-lower-xi = "rounded"
 asterisk = "hex-low"
 underscore = "above-baseline"
-paren = "flat-arc"
 brace = "curly-flat-boundary"
 guillemet = "straight"
 number-sign = "slanted"
-ampersand = "upper-open"
+ampersand = "lower-open"
 at = "fourfold"
 dollar = "interrupted"
 cent = "bar-interrupted"
 lig-ltgteq = "slanted"
 lig-equal-chain = "without-notch"
 lig-hyphen-chain = "without-notch"
-
-[buildPlans.Iovevka.weights.Light]
-shape = 300
-menu = 300
-css = 300
 
 [buildPlans.Iovevka.weights.Regular]
 shape = 400
@@ -63,39 +48,13 @@ shape = 500
 menu = 500
 css = 500
 
-[buildPlans.Iovevka.weights.SemiBold]
-shape = 600
-menu = 600
-css = 600
-
 [buildPlans.Iovevka.widths.Normal]
 shape = 500
 menu = 5
 css = "normal"
-
-[buildPlans.Iovevka.widths.Extended]
-shape = 600
-menu = 7
-css = "expanded"
-
-[buildPlans.Iovevka.widths.Condensed]
-shape = 416
-menu = 3
-css = "condensed"
-
-[buildPlans.Iovevka.widths.SemiCondensed]
-shape = 456
-menu = 4
-css = "semi-condensed"
-
-[buildPlans.Iovevka.widths.SemiExtended]
-shape = 548
-menu = 6
-css = "semi-expanded"
 
 [buildPlans.Iovevka.slopes.Upright]
 angle = 0
 shape = "upright"
 menu = "upright"
 css = "normal"
-
