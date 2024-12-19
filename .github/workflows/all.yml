@@ -27,7 +27,7 @@ jobs:
       id: create_tag
       run: |
         cd iosevka
-        # TAG_NAME="v0.0.2.1"  # 这里设置你想要的标签名
+        # TAG_NAME="v0.0.2.2"  # 这里设置你想要的标签名
         # git tag $TAG_NAME
         # git push origin $TAG_NAME
 
@@ -100,8 +100,8 @@ jobs:
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: v0.0.2.1
-        name: Iovevka-4.0-alpha(Round)
+        tag_name: v0.0.2.2
+        name: Iovevka-4.0-alpha(ubuntu-style)
         #tag_name: ${{ github.ref }}
         #name: ${{ github.ref }}
         # body: 精简大量没必要的配置
