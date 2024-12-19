@@ -100,7 +100,7 @@ jobs:
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: v0.0.2.3
+        tag_name: v0.0.2.4
         name: Iovevka-4.0-alpha(ubuntu-style)
         #tag_name: ${{ github.ref }}
         #name: ${{ github.ref }}
