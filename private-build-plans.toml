@@ -11,10 +11,8 @@ cap = 950
 ascender = 950
 xHeight = 587
 parenSize = 950
-accentWidth = 0
 accentClearance = 0
 accentHeight = 0
-accentStackOffset = 0
 
 [buildPlans.Iovevka.variants.design]
 one = "base"
