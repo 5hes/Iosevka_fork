@@ -7,12 +7,12 @@ exportGlyphNames = false
 noLigation = true
 
 [buildPlans.Iovevka.metricOverride]
-cap = 950
-ascender = 950
-xHeight = 587
-parenSize = 950
-accentClearance = 0
-accentHeight = 0
+cap = 1000
+ascender = 1000
+xHeight = 618
+parenSize = 1000
+accentClearance = 1
+accentHeight = 1
 
 [buildPlans.Iovevka.variants.design]
 one = "base"
