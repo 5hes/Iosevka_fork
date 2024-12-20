@@ -6,6 +6,12 @@ noCvSs = true
 exportGlyphNames = false
 noLigation = true
 
+[buildPlans.IosevkaCustom.metricOverride]
+cap = 950
+ascender = 950
+xHeight = 587
+parenSize = 950
+
 [buildPlans.Iovevka.variants.design]
 one = "base"
 two = "straight-neck-serifless"
