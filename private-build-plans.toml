@@ -10,9 +10,11 @@ noLigation = true
 cap = 1000
 ascender = 1000
 xHeight = 618
+accentWidth = 1
 parenSize = 1000
 accentClearance = 1
 accentHeight = 1
+accentStackOffset = 1
 
 [buildPlans.Iovevka.variants.design]
 one = "base"
