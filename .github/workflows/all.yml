@@ -19,7 +19,7 @@ jobs:
 
     steps:
     - name: checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v4.2.2
       with:
         path: iosevka
 
@@ -33,13 +33,13 @@ jobs:
 
 
     - name: Use Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v4.1.0
       with:
         node-version: latest
 
-    - uses: actions/setup-python@v5
+    - uses: actions/setup-python@v5.3.0
       with:
-        python-version: '3.13'
+        python-version: '3.14'
           
     - name: Install Depand
       shell: bash
