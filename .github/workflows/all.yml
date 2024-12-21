@@ -54,6 +54,8 @@ jobs:
         npm install
         npm audit fix
         npm run build -- ttf::Iovevka
+        npm run build -- ttf::Serif
+        npm run build -- ttf::Ubuntu
 
 #    - name: patch-nerd-hint
 #      shell: bash
@@ -101,7 +103,7 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         tag_name: v0.0.2.7
-        name: Iovevka-4.0-alpha-3(normal)
+        name: Iovevka-4.0-alpha-3(all)
         #tag_name: ${{ github.ref }}
         #name: ${{ github.ref }}
         # body: 精简大量没必要的配置
