@@ -122,7 +122,7 @@ jobs:
 
     - name: Rename-Round
       run: |
-        cd iosevka/dist/Round/TTF-Unhinted/rename
+        cd iosevka/dist/Round/TTF-Unhinted/
         bash rename
         
     - name: Create Release and Upload Release Asset
