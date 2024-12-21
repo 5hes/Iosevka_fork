@@ -111,8 +111,9 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          ./iosevka/dist/Iovevka/TTF-Unhinted/**
-          ./iosevka/dist/Iovevka/TTF/**
+          ./iosevka/dist/Iovevka/**
+          ./iosevka/dist/Ubuntu/**
+          ./iosevka/dist/Serif/**
 
 
 
