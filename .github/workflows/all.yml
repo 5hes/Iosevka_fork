@@ -1,4 +1,4 @@
-name: build-release
+iname: build-release
 
 on:
   push:
@@ -87,7 +87,7 @@ jobs:
         name: Iovevka-400-hinted
         path: ./iosevka/dist/Iovevka/TTF/*.ttf
 
-    - name: Rename
+    - name: Make rename script
       shell: bash
       run: |
         cd iosevka/dist/Iovevka/TTF-Unhinted/
@@ -95,9 +95,17 @@ jobs:
         echo '    mv "$file" "${file%.ttf}-Unhinted.ttf"' >> rename
         echo 'done' >> rename
         chmod +x rename
-        bash rename
+        cp rename iosevka/dist/Ubuntu/TTF-Unhinted/
+        cp rename iosevka/dist/Serif/TTF-Unhinted/
+        
+    - name: Rename
+      run: |
+        bash iosevka/dist/Iovevka/TTF-Unhinted/rename
+        bash iosevka/dist/Ubuntu/TTF-Unhinted/rename
+        bash iosevka/dist/Serif/TTF-Unhinted/rename
         pwd
         ls -ltrah
+        tree
         
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v2
