@@ -96,6 +96,7 @@ jobs:
         echo '    mv "$file" "${file%.ttf}-Unhinted.ttf"' >> rename
         echo 'done' >> rename
         chmod +x rename
+        cp rename ../../../../
         cp rename iosevka/dist/Ubuntu/TTF-Unhinted/
         cp rename iosevka/dist/Serif/TTF-Unhinted/
         cp rename iosevka/dist/Round/TTF-Unhinted/
