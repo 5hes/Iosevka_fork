@@ -88,6 +88,9 @@ jobs:
         name: Iovevka-400-hinted
         path: ./iosevka/dist/Iovevka/TTF/*.ttf
 
+    - name: Check
+      run: tree
+      
     - name: Make rename script
       shell: bash
       run: |
@@ -97,6 +100,7 @@ jobs:
         echo 'done' >> rename
         chmod +x rename
         cp rename ../../../../
+        cd ../../../../
         cp rename iosevka/dist/Ubuntu/TTF-Unhinted/
         cp rename iosevka/dist/Serif/TTF-Unhinted/
         cp rename iosevka/dist/Round/TTF-Unhinted/
