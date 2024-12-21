@@ -105,15 +105,25 @@ jobs:
         cp rename iosevka/dist/Serif/TTF-Unhinted/
         cp rename iosevka/dist/Round/TTF-Unhinted/
         
-    - name: Rename
+    - name: Rename-Iovevka
       run: |
-        bash iosevka/dist/Iovevka/TTF-Unhinted/rename
-        bash iosevka/dist/Ubuntu/TTF-Unhinted/rename
-        bash iosevka/dist/Serif/TTF-Unhinted/rename
-        bash iosevka/dist/Round/TTF-Unhinted/rename
-        pwd
-        ls -ltrah
-        tree
+        cd iosevka/dist/Iovevka/TTF-Unhinted/
+        bash rename
+
+    - name: Rename-Ubuntu
+      run: |
+        cd iosevka/dist/Ubuntu/TTF-Unhinted/
+        bash rename
+
+    - name: Rename-Serif
+      run: |
+        cd iosevka/dist/Serif/TTF-Unhinted/
+        bash rename
+
+    - name: Rename-Round
+      run: |
+        cd iosevka/dist/Round/TTF-Unhinted/rename
+        bash rename
         
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v2
