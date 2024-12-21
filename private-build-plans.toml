@@ -6,18 +6,8 @@ noCvSs = true
 exportGlyphNames = false
 noLigation = true
 
-[buildPlans.Iovevka.metricOverride]
-cap = 1000
-ascender = 1000
-xHeight = 618
-accentWidth = 1
-parenSize = 1000
-accentClearance = 1
-accentHeight = 1
-accentStackOffset = 1
-
 [buildPlans.Iovevka.variants.design]
-one = "base"
+# one = "base"
 two = "straight-neck-serifless"
 six = "open-contour"
 seven = "bend-serifless"
@@ -27,17 +17,21 @@ zero = "slashed-cutout"
 capital-g = "toothless-rounded-serifless-hooked"
 capital-k = "symmetric-connected-serifless"
 capital-m = "slanted-sides-hanging-serifless"
+capital-u = "toothless-corner-serifless"
 a = "double-storey-toothless-corner"
 b = "toothless-corner-serifless"
 d = "toothless-corner-serifless"
 g = "single-storey-earless-corner"
+i = "hooky"
 k = "symmetric-connected-serifless"
 l = "zshaped"
 m = "earless-corner-double-arch-serifless"
 n = "earless-corner-straight-serifless"
 p = "earless-corner-serifless"
 q = "earless-corner-straight-serifless"
-u = "toothless-rounded-serifless"
+r = "earless-corner-serifless"
+# u = "toothless-rounded-serifless"
+u = "toothless-corner-serifless"
 y = "straight-turn-serifless"
 capital-eszet = "rounded-serifless"
 lower-lambda = "tailed-turn"
