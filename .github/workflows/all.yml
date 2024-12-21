@@ -27,7 +27,7 @@ jobs:
       id: create_tag
       run: |
         cd iosevka
-        TAG_NAME="v0.0.2.8"  # 这里设置你想要的标签名
+        TAG_NAME="v0.0.2.9"  # 这里设置你想要的标签名
         git tag $TAG_NAME
         git push origin $TAG_NAME
 
@@ -54,7 +54,8 @@ jobs:
         npm install
         npm audit fix
         npm run build -- ttf::Iovevka
-        npm run build -- ttf::IovevkaMix
+        npm run build -- ttf::IovevkaHooky
+        npm run build -- ttf::IovevkaHookyMix
         npm run build -- ttf::Serif
         npm run build -- ttf::Ubuntu
         npm run build -- ttf::Round
@@ -92,7 +93,8 @@ jobs:
         chmod +x rename
         cp rename ../../../../
         cd ../../../../
-        cp rename iosevka/dist/IovevkaMix/TTF-Unhinted/
+        cp rename iosevka/dist/IovevkaHooky/TTF-Unhinted/
+        cp rename iosevka/dist/IovevkaHookyMix/TTF-Unhinted/
         cp rename iosevka/dist/Ubuntu/TTF-Unhinted/
         cp rename iosevka/dist/Serif/TTF-Unhinted/
         cp rename iosevka/dist/Round/TTF-Unhinted/
@@ -103,9 +105,14 @@ jobs:
         cd iosevka/dist/Iovevka/TTF-Unhinted/
         bash rename
 
-    - name: Rename-Iovevka
+    - name: Rename-IovevkaHooky
       run: |
-        cd iosevka/dist/IovevkaMix/TTF-Unhinted/
+        cd iosevka/dist/IovevkaHooky/TTF-Unhinted/
+        bash rename
+
+    - name: Rename-IovevkaHookyMix
+      run: |
+        cd iosevka/dist/IovevkaHookyMix/TTF-Unhinted/
         bash rename
 
     - name: Rename-Ubuntu
@@ -126,7 +133,7 @@ jobs:
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: v0.0.2.8
+        tag_name: v0.0.2.9
         name: Iovevka-4.0-alpha-3(all)
         #tag_name: ${{ github.ref }}
         #name: ${{ github.ref }}
@@ -136,12 +143,14 @@ jobs:
         prerelease: false
         files: |
           ./iosevka/dist/Iovevka/TTF/*.ttf
-          ./iosevka/dist/IovevkaMix/TTF/*.ttf
+          ./iosevka/dist/IovevkaHooky/TTF/*.ttf
+          ./iosevka/dist/IovevkaHookyMix/TTF/*.ttf
           ./iosevka/dist/Ubuntu/TTF/*.ttf
           ./iosevka/dist/Serif/TTF/*.ttf
           ./iosevka/dist/Round/TTF/*.ttf
           ./iosevka/dist/Iovevka/TTF-Unhinted/*.ttf
-          ./iosevka/dist/IovevkaMix/TTF-Unhinted/*.ttf
+          ./iosevka/dist/IovevkaHooky/TTF-Unhinted/*.ttf
+          ./iosevka/dist/IovevkaHookyMix/TTF-Unhinted/*.ttf
           ./iosevka/dist/Ubuntu/TTF-Unhinted/*.ttf
           ./iosevka/dist/Serif/TTF-Unhinted/*.ttf
           ./iosevka/dist/Round/TTF-Unhinted/*.ttf
