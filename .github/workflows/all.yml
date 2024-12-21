@@ -1,4 +1,4 @@
-iname: build-release
+name: build-release
 
 on:
   push:
@@ -56,6 +56,7 @@ jobs:
         npm run build -- ttf::Iovevka
         npm run build -- ttf::Serif
         npm run build -- ttf::Ubuntu
+        npm run build -- ttf::Round
 
 #    - name: patch-nerd-hint
 #      shell: bash
@@ -97,12 +98,14 @@ jobs:
         chmod +x rename
         cp rename iosevka/dist/Ubuntu/TTF-Unhinted/
         cp rename iosevka/dist/Serif/TTF-Unhinted/
+        cp rename iosevka/dist/Round/TTF-Unhinted/
         
     - name: Rename
       run: |
         bash iosevka/dist/Iovevka/TTF-Unhinted/rename
         bash iosevka/dist/Ubuntu/TTF-Unhinted/rename
         bash iosevka/dist/Serif/TTF-Unhinted/rename
+        bash iosevka/dist/Round/TTF-Unhinted/rename
         pwd
         ls -ltrah
         tree
@@ -122,6 +125,7 @@ jobs:
           ./iosevka/dist/Iovevka/**
           ./iosevka/dist/Ubuntu/**
           ./iosevka/dist/Serif/**
+          ./iosevka/dist/Round/**
 
 
 
