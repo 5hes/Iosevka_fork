@@ -26,10 +26,10 @@ jobs:
     - name: Create a new tag
       id: create_tag
       run: |
-        cd iosevka
-        TAG_NAME="v0.0.2.9"  # 这里设置你想要的标签名
-        git tag $TAG_NAME
-        git push origin $TAG_NAME
+        # cd iosevka
+        # TAG_NAME="v0.0.2.9"  # 这里设置你想要的标签名
+        # git tag $TAG_NAME
+        # git push origin $TAG_NAME
 
 
     - name: Use Node.js
