@@ -32,6 +32,7 @@ cent = "open"
 lig-ltgteq = "slanted"
 lig-equal-chain = "without-notch"
 lig-hyphen-chain = "without-notch"
+cyrl-em = "hanging-serifless"
 
 [buildPlans.Iovevka.weights.Regular]
 shape = 400
@@ -70,7 +71,6 @@ zero = "slashed-cutout"
 capital-g = "toothless-rounded-serifless-hooked"
 capital-j = "serifless"
 capital-k = "symmetric-connected-serifless"
-g = "single-storey-flat-hook-serifless"
 i = "hooky"
 j = "hooky"
 k = "symmetric-connected-serifless"
@@ -91,6 +91,7 @@ cent = "open"
 lig-ltgteq = "slanted"
 lig-equal-chain = "without-notch"
 lig-hyphen-chain = "without-notch"
+cyrl-em = "hanging-serifless"
 
 [buildPlans.IovevkaHooky.weights.Regular]
 shape = 400
@@ -165,6 +166,7 @@ cent = "open"
 lig-ltgteq = "slanted"
 lig-equal-chain = "without-notch"
 lig-hyphen-chain = "without-notch"
+cyrl-em = "hanging-serifless"
 
 [buildPlans.IovevkaHookyMix.weights.Regular]
 shape = 400
