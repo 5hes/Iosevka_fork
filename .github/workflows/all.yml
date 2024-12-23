@@ -1,7 +1,6 @@
 name: build-release
 
 on:
-  push:
   workflow_dispatch:
     inputs:
       release:
@@ -56,6 +55,7 @@ jobs:
         npm run build -- ttf::Iovevka
         npm run build -- ttf::IovevkaHooky
         npm run build -- ttf::IovevkaHookyMix
+        npm run build -- ttf::IovevkaHookyRound
         npm run build -- ttf::Serif
         npm run build -- ttf::Ubuntu
         npm run build -- ttf::Round
@@ -94,6 +94,7 @@ jobs:
         cp rename ../../../../
         cd ../../../../
         cp rename iosevka/dist/IovevkaHooky/TTF-Unhinted/
+        cp rename iosevka/dist/IovevkaHookyRound/TTF-Unhinted/
         cp rename iosevka/dist/IovevkaHookyMix/TTF-Unhinted/
         cp rename iosevka/dist/Ubuntu/TTF-Unhinted/
         cp rename iosevka/dist/Serif/TTF-Unhinted/
@@ -108,6 +109,11 @@ jobs:
     - name: Rename-IovevkaHooky
       run: |
         cd iosevka/dist/IovevkaHooky/TTF-Unhinted/
+        bash rename
+
+    - name: Rename-IovevkaHookyRound
+      run: |
+        cd iosevka/dist/IovevkaHookyRound/TTF-Unhinted/
         bash rename
 
     - name: Rename-IovevkaHookyMix
@@ -144,6 +150,7 @@ jobs:
         files: |
           ./iosevka/dist/Iovevka/TTF/*.ttf
           ./iosevka/dist/IovevkaHooky/TTF/*.ttf
+          ./iosevka/dist/IovevkaHookyRound/TTF/*.ttf
           ./iosevka/dist/IovevkaHookyMix/TTF/*.ttf
           ./iosevka/dist/Ubuntu/TTF/*.ttf
           ./iosevka/dist/Serif/TTF/*.ttf
@@ -154,6 +161,7 @@ jobs:
           ./iosevka/dist/Ubuntu/TTF-Unhinted/*.ttf
           ./iosevka/dist/Serif/TTF-Unhinted/*.ttf
           ./iosevka/dist/Round/TTF-Unhinted/*.ttf
+          ./iosevka/dist/IovevkaHookyRound/TTF-Unhinted/*.ttf
 
 
 
