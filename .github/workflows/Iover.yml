@@ -13,9 +13,9 @@ jobs:
   release:
     runs-on: ubuntu-latest
 
-#     strategy:
-#       matrix:
-#         fontName: ["Iosevka"]
+    strategy:
+      matrix:
+        fontName: ["SukIove"]
 
     steps:
     - name: checkout
@@ -41,8 +41,8 @@ jobs:
         python-version: '3.13'
     
     - name: Build
+      working-directory: iosevka
       run: |
-        cd iosevka
         npm install
         npm audit fix
         npm run build -- ttf-unhinted::Iover
