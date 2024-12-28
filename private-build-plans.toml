@@ -6,7 +6,7 @@ noCvSs = true
 exportGlyphNames = false
 noLigation = true
 
-[buildPlans.IosevkaCustom.metricOverride]
+[buildPlans.Iover.metricOverride]
 xHeight = 602
 cap = 788
 ascender = 788
