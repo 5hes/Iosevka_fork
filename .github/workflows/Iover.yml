@@ -42,7 +42,7 @@ jobs:
     
     - name: Build
       run: |
-        cd Iosevka
+        cd iosevka
         npm install
         npm audit fix
         npm run build -- ttf-unhinted::Iover
