@@ -1,7 +1,6 @@
 name: build-release
 
 on:
-  push:
   workflow_dispatch:
     inputs:
       release:
@@ -54,6 +53,7 @@ jobs:
         npm install
         npm audit fix
         npm run build -- ttf::Iovevka
+        npm run build -- ttf::Iover
         npm run build -- ttf::IovevkaHooky
         npm run build -- ttf::IovevkaHookyMix
         npm run build -- ttf::IovevkaHookyRound
@@ -100,8 +100,13 @@ jobs:
         cp rename iosevka/dist/Ubuntu/TTF-Unhinted/
         cp rename iosevka/dist/Serif/TTF-Unhinted/
         cp rename iosevka/dist/Round/TTF-Unhinted/
+        cp rename iosevka/dist/Iover/TTF-Unhinted/
         
-        
+    - name: Rename-Iovevka
+      run: |
+        cd iosevka/dist/Iover/TTF-Unhinted/
+        bash rename    
+       
     - name: Rename-Iovevka
       run: |
         cd iosevka/dist/Iovevka/TTF-Unhinted/
@@ -156,6 +161,7 @@ jobs:
           ./iosevka/dist/Ubuntu/TTF/*.ttf
           ./iosevka/dist/Serif/TTF/*.ttf
           ./iosevka/dist/Round/TTF/*.ttf
+          ./iosevka/dist/Iover/TTF/*.ttf
           ./iosevka/dist/Iovevka/TTF-Unhinted/*.ttf
           ./iosevka/dist/IovevkaHooky/TTF-Unhinted/*.ttf
           ./iosevka/dist/IovevkaHookyMix/TTF-Unhinted/*.ttf
@@ -163,7 +169,7 @@ jobs:
           ./iosevka/dist/Serif/TTF-Unhinted/*.ttf
           ./iosevka/dist/Round/TTF-Unhinted/*.ttf
           ./iosevka/dist/IovevkaHookyRound/TTF-Unhinted/*.ttf
-
+          ./iosevka/dist/Iover/TTF-Unhinted/*.ttf
 
 
 
