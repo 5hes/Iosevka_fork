@@ -11,6 +11,7 @@ xHeight = 618
 cap = 809
 ascender = 809
 leading = 1309
+sb = 'blend(weight, [400, 75])'
 onumZeroHeightRatio = 1.309
 archDepth = 'blend(weight, [400, 214])'
 smallArchDepth = 'blend(weight, [400, 237])'
