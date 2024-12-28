@@ -13,9 +13,9 @@ jobs:
   release:
     runs-on: ubuntu-latest
 
-#     strategy:
-#       matrix:
-#         fontName: ["Iosevka"]
+    strategy:
+      matrix:
+        fontName: ["Iosevka"]
 
     steps:
     - name: checkout
