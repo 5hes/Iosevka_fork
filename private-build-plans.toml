@@ -7,14 +7,14 @@ exportGlyphNames = false
 noLigation = true
 
 [buildPlans.Iover.metricOverride]
-xHeight = 587
-cap = 794
-ascender = 794
-leading = 1285
-sb = 'blend(weight, [400, 25])'
-onumZeroHeightRatio = 1.352
-archDepth = 'blend(weight, [400, 211])'
-smallArchDepth = 'blend(weight, [400, 226])'
+xHeight = 540
+cap = 710
+ascender = 710
+leading = 1415
+sb = 'blend(weight, [400, 43])'
+onumZeroHeightRatio = 1.315
+archDepth = 'blend(weight, [400, 188])'
+smallArchDepth = 'blend(weight, [400, 208])'
 
 [buildPlans.Iover.variants.design]
 three = "flat-top-serifless"
