@@ -1,7 +1,6 @@
 name: Iove build
 
 on:
-  push:
   workflow_dispatch:
     inputs:
       release:
@@ -23,9 +22,9 @@ jobs:
       id: create_tag
       run: |
         cd iosevka
-        # TAG_NAME="v0.0.4-Iover"
-        # git tag $TAG_NAME
-        # git push origin $TAG_NAME
+        TAG_NAME="v0.0.5-Iover"
+        git tag $TAG_NAME
+        git push origin $TAG_NAME
 
     - name: Use Node.js
       uses: actions/setup-node@v4.1.0
@@ -52,8 +51,8 @@ jobs:
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: v0.0.4-Iover
-        name: Iover-4.0-alpha-4(gold)
+        tag_name: v0.0.5-Iover
+        name: Iover-4.0-alpha-4(test)
         # body: l Ioνe yoυ
         files: |
           ./iosevka/dist/SukIove/TTF-Unhinted/*.ttf
