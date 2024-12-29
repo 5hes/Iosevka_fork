@@ -46,6 +46,8 @@ jobs:
         npm install
         npm audit fix
         npm run build -- ttf-unhinted::Iover
+        npm run build -- ttf-unhinted::SukIove
+        
 
     - name: Check info
       run: |
@@ -59,6 +61,7 @@ jobs:
         name: Iover-4.0-alpha-4
         # body: l Ioνe yoυ
         files: |
+          ./iosevka/dist/SukIove/TTF-Unhinted/*.ttf
           ./iosevka/dist/Iover/TTF-Unhinted/*.ttf
 
 
