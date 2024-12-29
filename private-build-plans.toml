@@ -57,6 +57,11 @@ shape = 400
 menu = 400
 css = 400
 
+[buildPlans.SukIove.weights.Medium]
+shape = 500
+menu = 500
+css = 500
+
 [buildPlans.SukIove.widths.Normal]
 shape = 500
 menu = 5
@@ -93,11 +98,7 @@ smallArchDepth = 'blend(weight, [400, 210])'
 [buildPlans.Iover.variants.design]
 one = "base"
 three = "flat-top-serifless"
-six = "open-contour"
-seven = "bend-serifless"
 eight = "two-circles"
-nine = "open-contour"
-zero = "slashed-cutout"
 capital-g = "toothless-rounded-serifless-hooked"
 capital-k = "symmetric-connected-serifless"
 k = "symmetric-connected-serifless"
@@ -121,6 +122,11 @@ cyrl-em = "hanging-serifless"
 shape = 400
 menu = 400
 css = 400
+
+[buildPlans.Iover.weights.Medium]
+shape = 500
+menu = 500
+css = 500
 
 [buildPlans.Iover.widths.Normal]
 shape = 500
