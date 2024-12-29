@@ -80,7 +80,7 @@ noCvSs = true
 exportGlyphNames = false
 noLigation = true
 
-[buildPlans.SukIove.metricOverride]
+[buildPlans.Iover.metricOverride]
 xHeight = 540
 cap = 710
 ascender = 710
