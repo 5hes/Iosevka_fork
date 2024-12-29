@@ -1,6 +1,7 @@
 name: Iove build
 
 on:
+  push:
   workflow_dispatch:
     inputs:
       release:
@@ -53,7 +54,7 @@ jobs:
       with:
         tag_name: v0.0.5-Iover
         name: Iover-4.0-alpha-4(test)
-        # body: l Ioνe yoυ
+        body: l Ioνe yoυ
         files: |
           ./iosevka/dist/SukIove/TTF-Unhinted/*.ttf
           ./iosevka/dist/Iover/TTF-Unhinted/*.ttf
