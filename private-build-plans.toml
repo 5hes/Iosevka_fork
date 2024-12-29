@@ -1,4 +1,4 @@
-[buildPlans.Iover]
+[buildPlans.SukIove]
 family = "SukIove"
 spacing = "fontconfig-mono"
 serifs = "sans"
@@ -6,17 +6,17 @@ noCvSs = true
 exportGlyphNames = false
 noLigation = true
 
-[buildPlans.Iover.metricOverride]
+[buildPlans.SukIove.metricOverride]
 xHeight = 540
 cap = 710
 ascender = 710
 leading = 1415
-sb = 'blend(weight, [400, 43])'
-onumZeroHeightRatio = 1.315
-archDepth = 'blend(weight, [400, 188])'
-smallArchDepth = 'blend(weight, [400, 208])'
+sb = 'blend(weight, [400, 45])'
+onumZeroHeightRatio = 1.314814
+archDepth = 'blend(weight, [400, 190])'
+smallArchDepth = 'blend(weight, [400, 210])'
 
-[buildPlans.Iover.variants.design]
+[buildPlans.SukIove.variants.design]
 three = "flat-top-serifless"
 eight = "two-circles"
 zero = "slashed-cutout"
@@ -36,6 +36,71 @@ p = "earless-rounded-serifless"
 q = "earless-rounded-straight-serifless"
 r = "earless-rounded-serifless"
 t = "hookless"
+u = "toothless-rounded-serifless"
+y = "straight-turn-serifless"
+capital-eszet = "rounded-serifless"
+lower-lambda = "tailed-turn"
+cyrl-capital-u = "straight-turn-serifless"
+asterisk = "hex-low"
+underscore = "above-baseline"
+ampersand = "lower-open"
+at = "compact"
+dollar = "interrupted"
+cent = "open"
+lig-ltgteq = "slanted"
+lig-equal-chain = "without-notch"
+lig-hyphen-chain = "without-notch"
+cyrl-em = "hanging-serifless"
+
+[buildPlans.SukIove.weights.Regular]
+shape = 400
+menu = 400
+css = 400
+
+[buildPlans.SukIove.widths.Normal]
+shape = 500
+menu = 5
+css = "normal"
+
+[buildPlans.SukIove.slopes.Upright]
+angle = 0
+shape = "upright"
+menu = "upright"
+css = "normal"
+
+
+########################################
+# Iover
+
+[buildPlans.Iover]
+family = "Iover"
+spacing = "fontconfig-mono"
+serifs = "sans"
+noCvSs = true
+exportGlyphNames = false
+noLigation = true
+
+[buildPlans.SukIove.metricOverride]
+xHeight = 540
+cap = 710
+ascender = 710
+leading = 1415
+sb = 'blend(weight, [400, 45])'
+onumZeroHeightRatio = 1.314814
+archDepth = 'blend(weight, [400, 190])'
+smallArchDepth = 'blend(weight, [400, 210])'
+
+[buildPlans.Iover.variants.design]
+one = "base"
+three = "flat-top-serifless"
+six = "open-contour"
+seven = "bend-serifless"
+eight = "two-circles"
+nine = "open-contour"
+zero = "slashed-cutout"
+capital-g = "toothless-rounded-serifless-hooked"
+capital-k = "symmetric-connected-serifless"
+k = "symmetric-connected-serifless"
 u = "toothless-rounded-serifless"
 y = "straight-turn-serifless"
 capital-eszet = "rounded-serifless"
