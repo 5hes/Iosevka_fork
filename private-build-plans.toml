@@ -7,14 +7,14 @@ exportGlyphNames = false
 noLigation = true
 
 [buildPlans.SukIove.metricOverride]
-xHeight = 540.7797401
-cap = 707.8898700
-ascender = 707.8898700
-leading = 1415.7797401
+xHeight = 540.779740
+cap = 707.889870
+ascender = 707.889870
+leading = 1415.779740
 sb = 'blend(weight, [400, 62.5])'
-onumZeroHeightRatio = 1.3090169
-archDepth = 'blend(weight, [400, 187.8075165])'
-smallArchDepth = 'blend(weight, [400, 207.9922077])'
+onumZeroHeightRatio = 1.309016
+archDepth = 'blend(weight, [400, 187.807516])'
+smallArchDepth = 'blend(weight, [400, 207.992207])'
 
 # [buildPlans.SukIove.metricOverride]
 # xHeight = 540
@@ -96,15 +96,14 @@ exportGlyphNames = false
 noLigation = true
 
 [buildPlans.SukIove.metricOverride]
-xHeight = 540.7797401
-cap = 707.8898700
-ascender = 707.8898700
-leading = 1415.7797401
+xHeight = 540.779740
+cap = 707.889870
+ascender = 707.889870
+leading = 1415.779740
 sb = 'blend(weight, [400, 62.5])'
-onumZeroHeightRatio = 1.3090169
-archDepth = 'blend(weight, [400, 187.8075165])'
-smallArchDepth = 'blend(weight, [400, 207.9922077])'
-
+onumZeroHeightRatio = 1.309016
+archDepth = 'blend(weight, [400, 187.807516])'
+smallArchDepth = 'blend(weight, [400, 207.992207])'
 
 [buildPlans.Iover.variants.design]
 one = "base"
