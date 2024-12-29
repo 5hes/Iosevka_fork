@@ -27,9 +27,9 @@ jobs:
       id: create_tag
       run: |
         cd iosevka
-        # TAG_NAME="v0.0.1-Iover"
-        # git tag $TAG_NAME
-        # git push origin $TAG_NAME
+        TAG_NAME="v0.0.2-Iover"
+        git tag $TAG_NAME
+        git push origin $TAG_NAME
 
     - name: Use Node.js
       uses: actions/setup-node@v4.1.0
@@ -55,8 +55,8 @@ jobs:
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: v0.0.1-Iover
-        name: Iover-4.0-alpha-3
+        tag_name: v0.0.2-Iover
+        name: Iover-4.0-alpha-4
         # body: l Ioνe yoυ
         files: |
           ./iosevka/dist/Iover/TTF-Unhinted/*.ttf
