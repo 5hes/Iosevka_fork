@@ -15,9 +15,9 @@ parenSize = 875
 sb = 'blend(weight, [400, 31.25], [500, 32.75])'
 onumZeroHeightRatio = 1.309016994374947424
 # archDepth = 'blend(weight, [400, 166.25], [500, 165])'
-archDepth = 'default_archDepth * 1.0625'
+archDepth = 'default_archDepth * 1.25'
 # smallArchDepth = 'blend(weight, [400, 171.25], [500, 170])'
-smallArchDepth = 'default_smallArchDepth * 1.0625'
+smallArchDepth = 'default_smallArchDepth * 1.25'
 
 
 # [buildPlans.SukIove.metricOverride]
@@ -108,9 +108,9 @@ parenSize = 875
 sb = 'blend(weight, [400, 31.25], [500, 32.75])'
 onumZeroHeightRatio = 1.309016994374947424
 # archDepth = 'blend(weight, [400, 166.25], [500, 165])'
-archDepth = 'default_archDepth * 1.0625'
+archDepth = 'default_archDepth * 1.25'
 # smallArchDepth = 'blend(weight, [400, 171.25], [500, 170])'
-smallArchDepth = 'default_smallArchDepth * 1.0625'
+smallArchDepth = 'default_smallArchDepth * 1.25'
 
 [buildPlans.Iover.variants.design]
 one = "base"
