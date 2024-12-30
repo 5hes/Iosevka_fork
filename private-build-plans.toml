@@ -104,8 +104,8 @@ leading = 1415.779740156157992
 parenSize = 875
 sb = 'blend(weight, [400, 31.25], [500, 32.75])'
 onumZeroHeightRatio = 1.309016994374947424
-archDepth = 'blend(weight, [400, 187.8075165513270806], [500, 18.3075165513270806])'
-smallArchDepth = 'blend(weight, [400, 207.9922077523684585], [500, 20.4922077523684585])'
+archDepth = 'blend(weight, [400, 187.8075165513270806], [500, 315.5166278062294954])'
+smallArchDepth = 'blend(weight, [400, 207.9922077523684585], [500, 323.6067977499789696])'
 
 [buildPlans.Iover.variants.design]
 one = "base"
