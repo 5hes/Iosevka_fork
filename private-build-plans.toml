@@ -11,11 +11,11 @@ xHeight = 540.7797401561579922
 cap = 707.8898700780789961
 ascender = 707.8898700780789961
 leading = 1415.779740156157992
-parenSize = 875
+parenSize = 925
 sb = 'blend(weight, [400, 31.25], [500, 32.75])'
 onumZeroHeightRatio = 1.309016994374947424
-archDepth = 'blend(weight, [400, 187.8075165513270806], [500, 186.3075165513270806])'
-smallArchDepth = 'blend(weight, [400, 207.9922077523684585], [500, 206.4922077523684585])'
+# archDepth = 'blend(weight, [400, 187.8075165513270806], [500, 186.3075165513270806])'
+# smallArchDepth = 'blend(weight, [400, 207.9922077523684585], [500, 206.4922077523684585])'
 
 # [buildPlans.SukIove.metricOverride]
 # xHeight = 540
@@ -101,11 +101,11 @@ xHeight = 540.7797401561579922
 cap = 707.8898700780789961
 ascender = 707.8898700780789961
 leading = 1415.779740156157992
-parenSize = 875
+parenSize = 925
 sb = 'blend(weight, [400, 31.25], [500, 32.75])'
 onumZeroHeightRatio = 1.309016994374947424
-archDepth = 'blend(weight, [400, 187.8075165513270806], [500, 170.625])'
-smallArchDepth = 'blend(weight, [400, 207.9922077523684585], [500, 175])'
+# archDepth = 'blend(weight, [400, 187.8075165513270806], [500, 170.625])'
+# smallArchDepth = 'blend(weight, [400, 207.9922077523684585], [500, 175])'
 
 [buildPlans.Iover.variants.design]
 one = "base"
