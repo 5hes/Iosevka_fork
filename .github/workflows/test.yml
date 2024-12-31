@@ -1,0 +1,57 @@
+name: Test build
+
+on:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: "l Ioνe yoυ"
+        required: true
+        type: boolean
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4.2.2
+      with:
+        path: iosevka
+
+    - name: Create a new tag
+      id: create_tag
+      run: |
+        cd iosevka
+        TAG_NAME="v0.0.0-test"
+        git tag $TAG_NAME
+        git push origin $TAG_NAME
+
+    - name: Use Node.js
+      uses: actions/setup-node@v4.1.0
+      with:
+        node-version: latest
+
+    - uses: actions/setup-python@v5.3.0
+      with:
+        python-version: '3.13'
+
+    - name: Build
+      working-directory: iosevka
+      run: |
+        npm install
+        npm audit fix
+        npm run build -- ttf-unhinted::Test
+                
+    - name: Check info
+      run: |
+        cd iosevka/dist
+        tree
+
+    - name: Create Release and Upload Release Asset
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: v0.0.0-test
+        name: test build
+        body: l Ioνe yoυ
+        files: |
+          ./iosevka/dist/Test/TTF-Unhinted/*.ttf
