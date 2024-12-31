@@ -71,12 +71,20 @@ exportGlyphNames = false
 noLigation = true
 
 [buildPlans.SukIove.metricOverride]
-xHeight = '(500 - (default_sb * 2)) / 0.618033988749894848'
-cap = '(500 - (default_sb * 2)) / 0.618033988749894848 / 0.809016994374947424'
-ascender = '(500 - (default_sb * 2)) / 0.618033988749894848 / 0.809016994374947424'
-leading = '(500 - (default_sb * 2)) / 0.618033988749894848 / 0.809016994374947424 / 0.618033988749894848'
-parenSize = '(500 - (default_sb * 2)) / 0.618033988749894848 / 0.618033988749894848'                  
-onumZeroHeightRatio = '1 / 0.809016994374947424'
+xHeight = '(500 - (default_sb * 2)) / 0.809016994374947424'
+cap = '(500 - (default_sb * 2)) / 0.809016994374947424 / 0.618033988749894848'
+ascender = '(500 - (default_sb * 2)) / 0.809016994374947424 / 0.618033988749894848'
+leading = '(500 - (default_sb * 2)) / 0.809016994374947424 / 0.618033988749894848 / 0.618033988749894848'
+parenSize = '(500 - (default_sb * 2)) / 0.809016994374947424 / 0.618033988749894848'                  
+onumZeroHeightRatio = '1 / 0.618033988749894848'
+
+# [buildPlans.SukIove.metricOverride]
+# xHeight = '(500 - (default_sb * 2))  / 0.618033988749894848'
+# cap = '(500 - (default_sb * 2)) / 0.618033988749894848 / 0.809016994374947424'
+# ascender = '(500 - (default_sb * 2)) / 0.618033988749894848 / 0.809016994374947424'
+# leading = '(500 - (default_sb * 2)) / 0.618033988749894848 / 0.809016994374947424 / 0.618033988749894848'
+# parenSize = '(500 - (default_sb * 2)) / 0.618033988749894848 / 0.618033988749894848'                  
+# onumZeroHeightRatio = '1 / 0.809016994374947424'
 
 # [buildPlans.SukIove.metricOverride]
 # xHeight = 540.7797401561579922
@@ -170,12 +178,12 @@ exportGlyphNames = false
 noLigation = true
 
 [buildPlans.Iover.metricOverride]
-xHeight = '(500 - (default_sb * 2)) / 0.618033988749894848'
-cap = '(500 - (default_sb * 2)) / 0.618033988749894848 / 0.809016994374947424'
-ascender = '(500 - (default_sb * 2)) / 0.618033988749894848 / 0.809016994374947424'
-leading = '(500 - (default_sb * 2)) / 0.618033988749894848 / 0.809016994374947424 / 0.618033988749894848'
-parenSize = '(500 - (default_sb * 2)) / 0.618033988749894848 / 0.618033988749894848'                  
-onumZeroHeightRatio = '1 / 0.809016994374947424'
+xHeight = '(500 - (default_sb * 2)) / 0.809016994374947424'
+cap = '(500 - (default_sb * 2)) / 0.809016994374947424 / 0.618033988749894848'
+ascender = '(500 - (default_sb * 2)) / 0.809016994374947424 / 0.618033988749894848'
+leading = '(500 - (default_sb * 2)) / 0.809016994374947424 / 0.618033988749894848 / 0.618033988749894848'
+parenSize = '(500 - (default_sb * 2)) / 0.809016994374947424 / 0.618033988749894848'                  
+onumZeroHeightRatio = '1 / 0.618033988749894848'
 
 [buildPlans.Iover.variants.design]
 one = "base"
