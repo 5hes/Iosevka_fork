@@ -44,6 +44,7 @@ jobs:
         npm run build -- ttf-unhinted::Iover
         npm run build -- ttf-unhinted::SukIove
         npm run build -- ttf-unhinted::Gold
+        npm run build -- ttf-unhinted::NormalGold
         
     - name: Check info
       run: |
@@ -60,6 +61,7 @@ jobs:
           ./iosevka/dist/SukIove/TTF-Unhinted/*.ttf
           ./iosevka/dist/Iover/TTF-Unhinted/*.ttf
           ./iosevka/dist/Gold/TTF-Unhinted/*.ttf
+          ./iosevka/dist/NormalGold/TTF-Unhinted/*.ttf
 
 
 
