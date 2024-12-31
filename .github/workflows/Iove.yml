@@ -54,11 +54,12 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         tag_name: v0.0.4-Iover
-        name: Iover-4.0-alpha-4(test)
+        name: Iover-4.0-alpha-4(gold)
         body: l Ioνe yoυ
         files: |
           ./iosevka/dist/SukIove/TTF-Unhinted/*.ttf
           ./iosevka/dist/Iover/TTF-Unhinted/*.ttf
+          ./iosevka/dist/Gold/TTF-Unhinted/*.ttf
 
 
 
