@@ -7,11 +7,18 @@ exportGlyphNames = false
 noLigation = true
 
 [buildPlans.Test.metricOverride]
-xHeight = '(1000 - (default_sb * 2)) * 0.618033988749894848'
-cap = '(1000 - (default_sb * 2)) * 0.618033988749894848 * 1.414213562373095048'
-ascender = '(1000 - (default_sb * 2)) * 0.618033988749894848 * 1.414213562373095048'
-leading = '(1000 - (default_sb * 2)) * 0.618033988749894848 * 1.414213562373095048 / 0.618033988749894848'
-parenSize = '1000 - (default_sb * 2)'
+xHeight = '(500 - (default_sb * 2)) * 1.414213562373095048'
+cap = '(500 - (default_sb * 2)) * 2'
+ascender = '(500 - (default_sb * 2)) * 2'
+leading = '(500 - (default_sb * 2)) * 1.414213562373095048 * 1.618033988749894848'
+parenSize = '(500 - (default_sb * 2)) * 1.414213562373095048 * 1.618033988749894848'
+
+# [buildPlans.Test.metricOverride]
+# xHeight = '(1000 - (default_sb * 2)) * 0.618033988749894848'
+# cap = '(1000 - (default_sb * 2)) * 0.618033988749894848 * 1.414213562373095048'
+# ascender = '(1000 - (default_sb * 2)) * 0.618033988749894848 * 1.414213562373095048'
+# leading = '(1000 - (default_sb * 2)) * 0.618033988749894848 * 1.414213562373095048 / 0.618033988749894848'
+# parenSize = '1000 - (default_sb * 2)'
 
 [buildPlans.Test.variants.design]
 one = "base"
