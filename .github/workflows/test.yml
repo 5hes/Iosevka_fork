@@ -47,6 +47,8 @@ jobs:
       run: |
         cd iosevka/dist
         tree
+        ls -ltrah Test/TTF-Unhinted/
+        ls -ltra Test/TTF-Unhinted/
 
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v2
