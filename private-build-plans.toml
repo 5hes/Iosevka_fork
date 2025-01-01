@@ -21,9 +21,11 @@ parenSize = '(500 - (default_sb * 2)) * 1.414213562373095048 * 1.618033988749894
 # parenSize = '1000 - (default_sb * 2)'
 
 [buildPlans.Test.variants.design]
-one = "base"
-three = "flat-top-serifless"
-eight = "two-circles"
+# one = "base"
+two = "straight-neck-serifless"
+# three = "flat-top-serifless"
+# eight = "two-circles"
+zero = "slashed-cutout"
 capital-g = "toothless-rounded-serifless-hooked"
 capital-k = "symmetric-connected-serifless"
 # f = "serifless-crossbar-at-x-height"
