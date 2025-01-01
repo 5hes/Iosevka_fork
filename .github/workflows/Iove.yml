@@ -58,10 +58,10 @@ jobs:
         name: Iover-4.0-alpha-4(gold)
         body: l Ioνe yoυ
         files: |
-#           ./iosevka/dist/SukIove/TTF-Unhinted/*.ttf
-#           ./iosevka/dist/Iover/TTF-Unhinted/*.ttf
-          ./iosevka/dist/Gold/TTF-Unhinted/*.ttf
-#           ./iosevka/dist/NormalGold/TTF-Unhinted/*.ttf
+          # ./iosevka/dist/SukIove/TTF-Unhinted/*.ttf
+          ./iosevka/dist/Iover/TTF-Unhinted/*.ttf
+          # ./iosevka/dist/Gold/TTF-Unhinted/*.ttf
+          # ./iosevka/dist/NormalGold/TTF-Unhinted/*.ttf
 
 
 
