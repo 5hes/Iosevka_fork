@@ -1,6 +1,7 @@
 name: Iove build
 
 on:
+  push:
   workflow_dispatch:
     inputs:
       release:
@@ -42,8 +43,9 @@ jobs:
         npm audit fix
         # npm run build -- ttf-unhinted::Iover
         # npm run build -- ttf-unhinted::SukIove
-        npm run build -- ttf-unhinted::Gold
+        # npm run build -- ttf-unhinted::Gold
         # npm run build -- ttf-unhinted::NormalGold
+        npm run build -- ttf-unhinted::Stable
         
     - name: Check info
       run: |
@@ -53,12 +55,12 @@ jobs:
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: v0.0.4-Iover
-        name: Iover-4.0-alpha-4(gold)
+        tag_name: v0.0.6-Iover
+        name: Iover-4.0-alpha-4(test)
         body: l Ioνe yoυ
         files: |
           # ./iosevka/dist/SukIove/TTF-Unhinted/*.ttf
-          ./iosevka/dist/Iover/TTF-Unhinted/*.ttf
+          # ./iosevka/dist/Iover/TTF-Unhinted/*.ttf
           # ./iosevka/dist/Gold/TTF-Unhinted/*.ttf
           # ./iosevka/dist/NormalGold/TTF-Unhinted/*.ttf
 
