@@ -63,6 +63,7 @@ jobs:
           # ./iosevka/dist/Iover/TTF-Unhinted/*.ttf
           # ./iosevka/dist/Gold/TTF-Unhinted/*.ttf
           # ./iosevka/dist/NormalGold/TTF-Unhinted/*.ttf
+          ./iosevka/dist/Stable/TTF-Unhinted/*.ttf
 
 
 
