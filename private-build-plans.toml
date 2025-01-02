@@ -1,3 +1,61 @@
+[buildPlans.Stable]
+family = "Iover"
+spacing = "fontconfig-mono"
+serifs = "sans"
+noCvSs = true
+exportGlyphNames = false
+noLigation = true
+
+[buildPlans.Stable.metricOverride]
+leading = 1200
+parenSize = 840
+
+[buildPlans.Stable.variants.design]
+two = "straight-neck-serifless"
+five = "upright-flat-serifless"
+zero = "slashed-cutout"
+capital-g = "toothless-rounded-serifless-hooked"
+capital-k = "symmetric-connected-serifless"
+k = "symmetric-connected-serifless"
+u = "toothless-rounded-serifless"
+capital-eszet = "rounded-serifless"
+lower-lambda = "tailed-turn"
+cyrl-capital-u = "straight-turn-serifless"
+asterisk = "hex-low"
+underscore = "above-baseline"
+ampersand = "lower-open"
+at = "compact"
+dollar = "interrupted"
+cent = "open"
+lig-ltgteq = "slanted"
+lig-equal-chain = "without-notch"
+lig-hyphen-chain = "without-notch"
+cyrl-em = "hanging-serifless"
+
+[buildPlans.Stable.weights.Regular]
+shape = 400
+menu = 400
+css = 400
+
+[buildPlans.Stable.weights.Medium]
+shape = 500
+menu = 500
+css = 500
+
+[buildPlans.Stable.widths.Normal]
+shape = 500
+menu = 5
+css = "normal"
+
+[buildPlans.Stable.slopes.Upright]
+angle = 0
+shape = "upright"
+menu = "upright"
+css = "normal"
+
+########################################
+# test
+
 [buildPlans.Test]
 family = "Iover"
 spacing = "fontconfig-mono"
