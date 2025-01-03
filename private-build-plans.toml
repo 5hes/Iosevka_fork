@@ -13,7 +13,9 @@ parenSize = 840
 [buildPlans.Stable.variants.design]
 two = "straight-neck-serifless"
 five = "upright-flat-serifless"
-zero = "slashed-cutout"
+# zero = "slashed-cutout"
+zero = "oval-dotted"
+capital-d = "more-rounded-serifless"
 capital-g = "toothless-rounded-serifless-hooked"
 capital-k = "symmetric-connected-serifless"
 k = "symmetric-connected-serifless"
