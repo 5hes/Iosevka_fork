@@ -325,12 +325,12 @@ exportGlyphNames = false
 noLigation = true
 
 [buildPlans.KawaiiMedium.metricOverride]
-xHeight = '(500 - (default_sb * 2))'
+xHeight = '500 - (default_sb * 2)'
 cap = '(500 - (default_sb * 2)) * 2'
 ascender = '(500 - (default_sb * 2)) * 2'
 leading = '(500 - (default_sb * 2)) * 2'
 parenSize = '(500 - (default_sb * 2)) * 2'
-sb = 1000
+sb = 'default_sb * 5'
 
 [buildPlans.KawaiiMedium.variants.design]
 one = "base"
