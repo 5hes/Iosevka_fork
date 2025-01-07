@@ -268,7 +268,7 @@ noLigation = true
 xHeight = 'default_cap * 0.5'
 leading = 'default_cap * 1.618033988749894848'
 parenSize = 'default_cap * 0.809016994374947424'
-sb = 1000
+sb = 'default_sb * 5'
 
 [buildPlans.Kawaii.variants.design]
 one = "base"
