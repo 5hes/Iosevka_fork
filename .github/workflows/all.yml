@@ -49,11 +49,13 @@ jobs:
       run: |
         npm install
         npm audit fix
+        npm run build -- ttf::Kawaii
         npm run build -- ttf::Iove
         npm run build -- ttf::SukIove
         npm run build -- ttf::Iover
         npm run build -- ttf::Gold
         npm run build -- ttf::Short
+        npm run build -- ttf::KawaiiMedium
         npm run build -- ttf::IoveMedium
         npm run build -- ttf::SukIoveMedium
         npm run build -- ttf::IoverMedium
@@ -92,6 +94,17 @@ jobs:
         echo 'done' >> rename
         chmod +x rename
         
+    - name: Rename-Iover
+      run: |
+        export repo=$PWD
+        cd iosevka/dist/Kawaii/TTF-Unhinted/
+        cp $repo/rename .
+        bash rename
+        cd $repo
+        cd iosevka/dist/KawaiiMedium/TTF-Unhinted/
+        cp $repo/rename .
+        bash rename
+
     - name: Rename-Iover
       run: |
         export repo=$PWD
@@ -159,6 +172,8 @@ jobs:
         draft: false
         prerelease: false
         files: |
+          ./iosevka/dist/Kawaii/TTF/*.ttf
+          ./iosevka/dist/KawaiiMedium/TTF/*.ttf
           ./iosevka/dist/Iove/TTF/*.ttf
           ./iosevka/dist/Iover/TTF/*.ttf
           ./iosevka/dist/SukIove/TTF/*.ttf
@@ -169,6 +184,8 @@ jobs:
           ./iosevka/dist/SukIoveMedium/TTF/*.ttf
           ./iosevka/dist/GoldMedium/TTF/*.ttf
           ./iosevka/dist/ShortMedium/TTF/*.ttf
+          ./iosevka/dist/Kawaii/TTF-Unhinted/*.ttf
+          ./iosevka/dist/KawaiiMedium/TTF-Unhinted/*.ttf
           ./iosevka/dist/Iove/TTF-Unhinted/*.ttf
           ./iosevka/dist/Iover/TTF-Unhinted/*.ttf
           ./iosevka/dist/SukIove/TTF-Unhinted/*.ttf
