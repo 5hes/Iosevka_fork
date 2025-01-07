@@ -1,4 +1,15 @@
-[buildPlans.Stable]
+########################################
+# test
+# one = "base"
+# three = "flat-top-serifless"
+# eight = "two-circles"
+# zero = "slashed-cutout"
+# f = "serifless-crossbar-at-x-height"
+# y = "straight-turn-serifless"
+# caret = "high"
+########################################
+
+[buildPlans.Iover]
 family = "Iover"
 spacing = "fontconfig-mono"
 serifs = "sans"
@@ -6,14 +17,13 @@ noCvSs = true
 exportGlyphNames = false
 noLigation = true
 
-[buildPlans.Stable.metricOverride]
-leading = 1200
-parenSize = 840
+[buildPlans.Iover.metricOverride]
+leading = 'default_cap * 1.618033988749894848'
+parenSize = 'default_xHeight * 1.618033988749894848'
 
-[buildPlans.Stable.variants.design]
+[buildPlans.Iover.variants.design]
 two = "straight-neck-serifless"
 five = "upright-flat-serifless"
-# zero = "slashed-cutout"
 zero = "oval-dotted"
 capital-d = "more-rounded-serifless"
 capital-g = "toothless-rounded-serifless-hooked"
@@ -34,31 +44,21 @@ lig-equal-chain = "without-notch"
 lig-hyphen-chain = "without-notch"
 cyrl-em = "hanging-serifless"
 
-[buildPlans.Stable.weights.Regular]
+[buildPlans.Iover.weights.Regular]
 shape = 400
 menu = 400
 css = 400
 
-[buildPlans.Stable.weights.Medium]
-shape = 500
-menu = 500
-css = 500
-
-[buildPlans.Stable.widths.Normal]
+[buildPlans.Iover.widths.Normal]
 shape = 500
 menu = 5
 css = "normal"
 
-[buildPlans.Stable.slopes.Upright]
-angle = 0
-shape = "upright"
-menu = "upright"
-css = "normal"
 
-########################################
-# test
 
-[buildPlans.Test]
+
+
+[buildPlans.IoverMedium]
 family = "Iover"
 spacing = "fontconfig-mono"
 serifs = "sans"
@@ -66,37 +66,25 @@ noCvSs = true
 exportGlyphNames = false
 noLigation = true
 
-[buildPlans.Test.metricOverride]
+[buildPlans.IoverMedium.metricOverride]
 xHeight = '(500 - (default_sb * 2)) * 1.414213562373095048'
 cap = '(500 - (default_sb * 2)) * 2'
 ascender = '(500 - (default_sb * 2)) * 2'
 leading = '(500 - (default_sb * 2)) * 2 * 1.618033988749894848'
 parenSize = '(500 - (default_sb * 2)) * 1.414213562373095048 * 1.618033988749894848'
 
-# [buildPlans.Test.metricOverride]
-# xHeight = '(1000 - (default_sb * 2)) * 0.618033988749894848'
-# cap = '(1000 - (default_sb * 2)) * 0.618033988749894848 * 1.414213562373095048'
-# ascender = '(1000 - (default_sb * 2)) * 0.618033988749894848 * 1.414213562373095048'
-# leading = '(1000 - (default_sb * 2)) * 0.618033988749894848 * 1.414213562373095048 / 0.618033988749894848'
-# parenSize = '1000 - (default_sb * 2)'
-
-[buildPlans.Test.variants.design]
-# one = "base"
+[buildPlans.IoverMedium.variants.design]
 two = "straight-neck-serifless"
-# three = "flat-top-serifless"
 five = "upright-flat-serifless"
-# eight = "two-circles"
-zero = "slashed-cutout"
+zero = "oval-dotted"
+capital-d = "more-rounded-serifless"
 capital-g = "toothless-rounded-serifless-hooked"
 capital-k = "symmetric-connected-serifless"
-# f = "serifless-crossbar-at-x-height"
 k = "symmetric-connected-serifless"
 u = "toothless-rounded-serifless"
-# y = "straight-turn-serifless"
 capital-eszet = "rounded-serifless"
 lower-lambda = "tailed-turn"
 cyrl-capital-u = "straight-turn-serifless"
-# caret = "high"
 asterisk = "hex-low"
 underscore = "above-baseline"
 ampersand = "lower-open"
@@ -108,30 +96,140 @@ lig-equal-chain = "without-notch"
 lig-hyphen-chain = "without-notch"
 cyrl-em = "hanging-serifless"
 
-[buildPlans.Test.weights.Regular]
-shape = 400
-menu = 400
-css = 400
-
-[buildPlans.Test.weights.Medium]
+[buildPlans.IoverMedium.weights.Medium]
 shape = 500
 menu = 500
 css = 500
 
-[buildPlans.Test.widths.Normal]
+[buildPlans.IoverMedium.widths.Normal]
 shape = 500
 menu = 5
 css = "normal"
 
-[buildPlans.Test.slopes.Upright]
-angle = 0
-shape = "upright"
-menu = "upright"
-css = "normal"
+
+
+
 
 
 ########################################
-# Gold
+
+
+
+
+
+[buildPlans.Iove]
+family = "Iover"
+spacing = "fontconfig-mono"
+serifs = "sans"
+noCvSs = true
+exportGlyphNames = false
+noLigation = true
+
+[buildPlans.Iove.metricOverride]
+xHeight = 'default_cap * 0.618033988749894848'
+leading = 'default_cap * 1.618033988749894848'
+parenSize = 'default_cap'
+
+[buildPlans.Iove.variants.design]
+one = "base"
+two = "straight-neck-serifless"
+eight = "two-circles"
+zero = "slashed-cutout"
+capital-d = "more-rounded-serifless"
+capital-g = "toothless-rounded-serifless-hooked"
+capital-k = "symmetric-connected-serifless"
+f = "serifless-crossbar-at-x-height"
+k = "symmetric-connected-serifless"
+u = "toothless-rounded-serifless"
+capital-eszet = "rounded-serifless"
+lower-lambda = "tailed-turn"
+cyrl-capital-u = "straight-turn-serifless"
+asterisk = "hex-low"
+underscore = "above-baseline"
+ampersand = "lower-open"
+at = "compact"
+dollar = "interrupted"
+cent = "open"
+lig-ltgteq = "slanted"
+lig-equal-chain = "without-notch"
+lig-hyphen-chain = "without-notch"
+cyrl-em = "hanging-serifless"
+
+[buildPlans.Iove.weights.Regular]
+shape = 400
+menu = 400
+css = 400
+
+[buildPlans.Iove.widths.Normal]
+shape = 500
+menu = 5
+css = "normal"
+
+
+
+
+
+[buildPlans.IoveMedium]
+family = "Iover"
+spacing = "fontconfig-mono"
+serifs = "sans"
+noCvSs = true
+exportGlyphNames = false
+noLigation = true
+
+[buildPlans.IoveMedium.metricOverride]
+xHeight = '(500 - (default_sb * 2)) * 1.236067977499789696'
+cap = '(500 - (default_sb * 2)) * 1.236067977499789696 * 1.618033988749894848'
+ascender = '(500 - (default_sb * 2)) * 1.236067977499789696 * 1.618033988749894848'
+leading = '(500 - (default_sb * 2)) * 1.236067977499789696 * 1.618033988749894848 * 1.618033988749894848'
+parenSize = '(500 - (default_sb * 2)) * 1.236067977499789696 * 1.618033988749894848'
+
+[buildPlans.IoveMedium.variants.design]
+one = "base"
+two = "straight-neck-serifless"
+eight = "two-circles"
+zero = "slashed-cutout"
+capital-d = "more-rounded-serifless"
+capital-g = "toothless-rounded-serifless-hooked"
+capital-k = "symmetric-connected-serifless"
+f = "serifless-crossbar-at-x-height"
+k = "symmetric-connected-serifless"
+u = "toothless-rounded-serifless"
+capital-eszet = "rounded-serifless"
+lower-lambda = "tailed-turn"
+cyrl-capital-u = "straight-turn-serifless"
+asterisk = "hex-low"
+underscore = "above-baseline"
+ampersand = "lower-open"
+at = "compact"
+dollar = "interrupted"
+cent = "open"
+lig-ltgteq = "slanted"
+lig-equal-chain = "without-notch"
+lig-hyphen-chain = "without-notch"
+cyrl-em = "hanging-serifless"
+
+[buildPlans.IoveMedium.weights.Medium]
+shape = 500
+menu = 500
+css = 500
+
+[buildPlans.IoveMedium.widths.Normal]
+shape = 500
+menu = 5
+css = "normal"
+
+
+
+
+
+
+########################################
+
+
+
+
+
 
 [buildPlans.Gold]
 family = "Iover"
@@ -142,26 +240,29 @@ exportGlyphNames = false
 noLigation = true
 
 [buildPlans.Gold.metricOverride]
-xHeight = '(500 - (default_sb * 2)) * 1.125'
-cap = '(500 - (default_sb * 2)) * 1.125 * 1.618033988749894848'
-ascender = '(500 - (default_sb * 2)) * 1.125 * 1.618033988749894848'
-leading = '(500 - (default_sb * 2)) * 1.125 * 1.618033988749894848 * 1.618033988749894848'
-parenSize = '(500 - (default_sb * 2)) * 1.125 * 0.618033988749894848'
+xHeight = 'default_xHeight * 1.144122805635368595'
+cap = 'default_cap * 1.309016994374947424'
+ascender = 'default_ascender * 1.309016994374947424'
+leading = 'default_cap * 1.309016994374947424 * 1.618033988749894848'
+parenSize = 'default_xHeight * 1.144122805635368595 * 1.618033988749894848'
 
 [buildPlans.Gold.variants.design]
 one = "base"
+two = "straight-neck-serifless"
 three = "flat-top-serifless"
+six = 'closed-contour'
 eight = "two-circles"
+nine = 'closed-contour'
+zero = "slashed-cutout"
+capital-d = "more-rounded-serifless"
 capital-g = "toothless-rounded-serifless-hooked"
 capital-k = "symmetric-connected-serifless"
 f = "serifless-crossbar-at-x-height"
 k = "symmetric-connected-serifless"
 u = "toothless-rounded-serifless"
-# y = "straight-turn-serifless"
 capital-eszet = "rounded-serifless"
 lower-lambda = "tailed-turn"
 cyrl-capital-u = "straight-turn-serifless"
-caret = "high"
 asterisk = "hex-low"
 underscore = "above-baseline"
 ampersand = "lower-open"
@@ -178,11 +279,6 @@ shape = 400
 menu = 400
 css = 400
 
-[buildPlans.Gold.weights.Medium]
-shape = 500
-menu = 500
-css = 500
-
 [buildPlans.Gold.widths.Normal]
 shape = 500
 menu = 5
@@ -194,8 +290,209 @@ shape = "upright"
 menu = "upright"
 css = "normal"
 
+
+
+
+
+[buildPlans.GoldMedium]
+family = "Iover"
+spacing = "fontconfig-mono"
+serifs = "sans"
+noCvSs = true
+exportGlyphNames = false
+noLigation = true
+
+[buildPlans.GoldMedium.metricOverride]
+xHeight = '(500 - (default_sb * 2)) * 1.618033988749894848'
+cap = '(500 - (default_sb * 2)) * 1.618033988749894848 * 1.618033988749894848'
+ascender = '(500 - (default_sb * 2)) * 1.618033988749894848 * 1.618033988749894848'
+leading = '(500 - (default_sb * 2)) * 1.618033988749894848 * 1.618033988749894848 * 1.618033988749894848'
+parenSize = '(500 - (default_sb * 2)) * 1.618033988749894848 * 1.618033988749894848'
+
+[buildPlans.GoldMediun.variants.design]
+one = "base"
+two = "straight-neck-serifless"
+three = "flat-top-serifless"
+six = 'closed-contour'
+eight = "two-circles"
+nine = 'closed-contour'
+zero = "slashed-cutout"
+capital-d = "more-rounded-serifless"
+capital-g = "toothless-rounded-serifless-hooked"
+capital-k = "symmetric-connected-serifless"
+f = "serifless-crossbar-at-x-height"
+k = "symmetric-connected-serifless"
+u = "toothless-rounded-serifless"
+capital-eszet = "rounded-serifless"
+lower-lambda = "tailed-turn"
+cyrl-capital-u = "straight-turn-serifless"
+asterisk = "hex-low"
+underscore = "above-baseline"
+ampersand = "lower-open"
+at = "compact"
+dollar = "interrupted"
+cent = "open"
+lig-ltgteq = "slanted"
+lig-equal-chain = "without-notch"
+lig-hyphen-chain = "without-notch"
+cyrl-em = "hanging-serifless"
+
+[buildPlans.GoldMedium.weights.Medium]
+shape = 500
+menu = 500
+css = 500
+
+[buildPlans.GoldMedium.widths.Normal]
+shape = 500
+menu = 5
+css = "normal"
+
+[buildPlans.GoldMedium.slopes.Upright]
+angle = 0
+shape = "upright"
+menu = "upright"
+css = "normal"
+
+
+
+
+
+
+########################################
+
+
+
+
+
+
+[buildPlans.Short]
+family = "Iover"
+spacing = "fontconfig-mono"
+serifs = "sans"
+noCvSs = true
+exportGlyphNames = false
+noLigation = true
+
+[buildPlans.Short.metricOverride]
+xHeight = 'default_xHeight * 0.809016994374947424'
+leading = 'default_cap * 1.618033988749894848'
+parenSize = 'default_xHeight * 0.809016994374947424 * 1.618033988749894848'
+
+[buildPlans.Short.variants.design]
+one = "base"
+two = "straight-neck-serifless"
+three = "flat-top-serifless"
+five = "upright-flat-serifless"
+eight = "two-circles"
+zero = "slashed-cutout"
+capital-d = "more-rounded-serifless"
+capital-g = "toothless-rounded-serifless-hooked"
+capital-k = "symmetric-connected-serifless"
+k = "symmetric-connected-serifless"
+u = "toothless-rounded-serifless"
+capital-eszet = "rounded-serifless"
+lower-lambda = "tailed-turn"
+cyrl-capital-u = "straight-turn-serifless"
+asterisk = "hex-low"
+underscore = "above-baseline"
+ampersand = "lower-open"
+at = "compact"
+dollar = "interrupted"
+cent = "open"
+lig-ltgteq = "slanted"
+lig-equal-chain = "without-notch"
+lig-hyphen-chain = "without-notch"
+cyrl-em = "hanging-serifless"
+
+[buildPlans.Short.weights.Regular]
+shape = 400
+menu = 400
+css = 400
+
+[buildPlans.Short.widths.Normal]
+shape = 500
+menu = 5
+css = "normal"
+
+[buildPlans.Short.slopes.Upright]
+angle = 0
+shape = "upright"
+menu = "upright"
+css = "normal"
+
+
+
+
+
+[buildPlans.ShortMedium]
+family = "Iover"
+spacing = "fontconfig-mono"
+serifs = "sans"
+noCvSs = true
+exportGlyphNames = false
+noLigation = true
+
+[buildPlans.ShortMedium.metricOverride]
+xHeight = '(500 - (default_sb * 2)) * 1.618033988749894848'
+cap = '(500 - (default_sb * 2)) * 2'
+ascender = '(500 - (default_sb * 2)) * 2'
+leading = '(500 - (default_sb * 2)) * 2 * 1.618033988749894848'
+parenSize = '(500 - (default_sb * 2)) * 1.618033988749894848 * 1.618033988749894848'
+
+[buildPlans.ShortMediun.variants.design]
+one = "base"
+two = "straight-neck-serifless"
+three = "flat-top-serifless"
+five = "upright-flat-serifless"
+eight = "two-circles"
+zero = "slashed-cutout"
+capital-d = "more-rounded-serifless"
+capital-g = "toothless-rounded-serifless-hooked"
+capital-k = "symmetric-connected-serifless"
+k = "symmetric-connected-serifless"
+u = "toothless-rounded-serifless"
+capital-eszet = "rounded-serifless"
+lower-lambda = "tailed-turn"
+cyrl-capital-u = "straight-turn-serifless"
+asterisk = "hex-low"
+underscore = "above-baseline"
+ampersand = "lower-open"
+at = "compact"
+dollar = "interrupted"
+cent = "open"
+lig-ltgteq = "slanted"
+lig-equal-chain = "without-notch"
+lig-hyphen-chain = "without-notch"
+cyrl-em = "hanging-serifless"
+
+[buildPlans.ShortMedium.weights.Medium]
+shape = 500
+menu = 500
+css = 500
+
+[buildPlans.ShortMedium.widths.Normal]
+shape = 500
+menu = 5
+css = "normal"
+
+[buildPlans.ShortMedium.slopes.Upright]
+angle = 0
+shape = "upright"
+menu = "upright"
+css = "normal"
+
+
+
+
+
+
 ########################################
 # SukIove
+
+
+
+
+
 
 [buildPlans.SukIove]
 family = "SukIove"
@@ -206,46 +503,16 @@ exportGlyphNames = false
 noLigation = true
 
 [buildPlans.SukIove.metricOverride]
-xHeight = '(500 - (default_sb * 2)) / 0.809016994374947424'
-cap = '(500 - (default_sb * 2)) / 0.809016994374947424 / 0.618033988749894848'
-ascender = '(500 - (default_sb * 2)) / 0.809016994374947424 / 0.618033988749894848'
-leading = '(500 - (default_sb * 2)) / 0.809016994374947424 / 0.618033988749894848 / 0.618033988749894848'
-parenSize = '(500 - (default_sb * 2)) / 0.809016994374947424 / 0.618033988749894848'                  
-onumZeroHeightRatio = '1 / 0.618033988749894848'
-
-# [buildPlans.SukIove.metricOverride]
-# xHeight = '(500 - (default_sb * 2))  / 0.618033988749894848'
-# cap = '(500 - (default_sb * 2)) / 0.618033988749894848 / 0.809016994374947424'
-# ascender = '(500 - (default_sb * 2)) / 0.618033988749894848 / 0.809016994374947424'
-# leading = '(500 - (default_sb * 2)) / 0.618033988749894848 / 0.809016994374947424 / 0.618033988749894848'
-# parenSize = '(500 - (default_sb * 2)) / 0.618033988749894848 / 0.618033988749894848'                  
-# onumZeroHeightRatio = '1 / 0.809016994374947424'
-
-# [buildPlans.SukIove.metricOverride]
-# xHeight = 540.7797401561579922
-# cap = 707.8898700780789961
-# ascender = 707.8898700780789961
-# leading = 1415.779740156157992
-# parenSize = 875
-# sb = 'blend(weight, [400, 31.25], [500, 32.75])'
-# onumZeroHeightRatio = 1.309016994374947424
-# archDepth = 'default_archDepth * 0.875'
-# smallArchDepth = 'default_smallArchDepth * 0.875'
-
-# [buildPlans.SukIove.metricOverride]
-# xHeight = 540
-# cap = 710
-# ascender = 710
-# leading = 1415
-# sb = 'blend(weight, [400, 50])'
-# onumZeroHeightRatio = 1.314814
-# archDepth = 'blend(weight, [400, 190])'
-# smallArchDepth = 'blend(weight, [400, 210])'
+xHeight = 'default_cap * 0.618033988749894848'
+leading = 'default_cap * 1.618033988749894848'
+parenSize = 'default_cap'
 
 [buildPlans.SukIove.variants.design]
-three = "flat-top-serifless"
+one = "base"
+two = "straight-neck-serifless"
 eight = "two-circles"
 zero = "slashed-cutout"
+capital-d = "more-rounded-serifless"
 capital-g = "toothless-rounded-serifless-hooked"
 capital-k = "symmetric-connected-serifless"
 a = "double-storey-toothless-rounded"
@@ -264,11 +531,9 @@ q = "earless-rounded-straight-serifless"
 r = "earless-rounded-serifless"
 t = "hookless"
 u = "toothless-rounded-serifless"
-# y = "straight-turn-serifless"
 capital-eszet = "rounded-serifless"
 lower-lambda = "tailed-turn"
 cyrl-capital-u = "straight-turn-serifless"
-# caret = "high"
 asterisk = "hex-low"
 underscore = "above-baseline"
 ampersand = "lower-open"
@@ -302,156 +567,36 @@ menu = "upright"
 css = "normal"
 
 
-########################################
-# Iover
 
-[buildPlans.Iover]
-family = "Iover"
+
+
+[buildPlans.SukIoveMedium]
+family = "SukIove"
 spacing = "fontconfig-mono"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
 noLigation = true
 
-[buildPlans.Iover.metricOverride]
-xHeight = '(500 - (default_sb * 2)) / 0.809016994374947424'
-cap = '(500 - (default_sb * 2)) / 0.809016994374947424 / 0.618033988749894848'
-ascender = '(500 - (default_sb * 2)) / 0.809016994374947424 / 0.618033988749894848'
-leading = '(500 - (default_sb * 2)) / 0.809016994374947424 / 0.618033988749894848 / 0.618033988749894848'
-parenSize = '(500 - (default_sb * 2)) / 0.809016994374947424 / 0.618033988749894848'                  
-onumZeroHeightRatio = '1 / 0.618033988749894848'
+[buildPlans.SukIoveMedium.metricOverride]
+xHeight = '(500 - (default_sb * 2)) * 1.236067977499789696'
+cap = '(500 - (default_sb * 2)) * 1.236067977499789696 * 1.618033988749894848'
+ascender = '(500 - (default_sb * 2)) * 1.236067977499789696 * 1.618033988749894848'
+leading = '(500 - (default_sb * 2)) * 1.236067977499789696 * 1.618033988749894848 * 1.618033988749894848'
+parenSize = '(500 - (default_sb * 2)) * 1.236067977499789696 * 1.618033988749894848'
 
-[buildPlans.Iover.variants.design]
+[buildPlans.SukIoveMedium.variants.design]
 one = "base"
-three = "flat-top-serifless"
-eight = "two-circles"
-capital-g = "toothless-rounded-serifless-hooked"
-capital-k = "symmetric-connected-serifless"
-f = "serifless-crossbar-at-x-height"
-k = "symmetric-connected-serifless"
-u = "toothless-rounded-serifless"
-# y = "straight-turn-serifless"
-capital-eszet = "rounded-serifless"
-lower-lambda = "tailed-turn"
-cyrl-capital-u = "straight-turn-serifless"
-# caret = "high"
-asterisk = "hex-low"
-underscore = "above-baseline"
-ampersand = "lower-open"
-at = "compact"
-dollar = "interrupted"
-cent = "open"
-lig-ltgteq = "slanted"
-lig-equal-chain = "without-notch"
-lig-hyphen-chain = "without-notch"
-cyrl-em = "hanging-serifless"
-
-[buildPlans.Iover.weights.Regular]
-shape = 400
-menu = 400
-css = 400
-
-[buildPlans.Iover.weights.Medium]
-shape = 500
-menu = 500
-css = 500
-
-[buildPlans.Iover.widths.Normal]
-shape = 500
-menu = 5
-css = "normal"
-
-[buildPlans.Iover.slopes.Upright]
-angle = 0
-shape = "upright"
-menu = "upright"
-css = "normal"
-
-########################################
-# normal gold
-
-[buildPlans.NormalGold]
-family = "Iover"
-spacing = "fontconfig-mono"
-serifs = "sans"
-noCvSs = true
-exportGlyphNames = false
-noLigation = true
-
-[buildPlans.NormalGold.metricOverride]
-# xHeight = '(500 - (default_sb * 2)) / 0.809016994374947424'
-cap = 'default_xHeight / 0.618033988749894848'
-ascender = 'default_xHeight / 0.618033988749894848'
-leading = 'default_xHeight / 0.618033988749894848 / 0.618033988749894848'
-parenSize = 'default_xHeight / 0.618033988749894848'                  
-onumZeroHeightRatio = '1 / 0.618033988749894848'
-
-[buildPlans.NormalGold.variants.design]
-one = "base"
-three = "flat-top-serifless"
-eight = "two-circles"
-capital-g = "toothless-rounded-serifless-hooked"
-capital-k = "symmetric-connected-serifless"
-f = "serifless-crossbar-at-x-height"
-k = "symmetric-connected-serifless"
-u = "toothless-rounded-serifless"
-# y = "straight-turn-serifless"
-capital-eszet = "rounded-serifless"
-lower-lambda = "tailed-turn"
-cyrl-capital-u = "straight-turn-serifless"
-# caret = "high"
-asterisk = "hex-low"
-underscore = "above-baseline"
-ampersand = "lower-open"
-at = "compact"
-dollar = "interrupted"
-cent = "open"
-lig-ltgteq = "slanted"
-lig-equal-chain = "without-notch"
-lig-hyphen-chain = "without-notch"
-cyrl-em = "hanging-serifless"
-
-[buildPlans.NormalGold.weights.Regular]
-shape = 400
-menu = 400
-css = 400
-
-[buildPlans.NormalGold.weights.Medium]
-shape = 500
-menu = 500
-css = 500
-
-[buildPlans.NormalGold.widths.Normal]
-shape = 500
-menu = 5
-css = "normal"
-
-[buildPlans.NormalGold.slopes.Upright]
-angle = 0
-shape = "upright"
-menu = "upright"
-css = "normal"
-
-########################################
-# IovevkaHookyRound
-
-[buildPlans.IovevkaHookyRound]
-family = "Iovevka"
-spacing = "fontconfig-mono"
-serifs = "sans"
-noCvSs = true
-exportGlyphNames = false
-noLigation = true
-
-[buildPlans.IovevkaHookyRound.variants.design]
-three = "flat-top-serifless"
+two = "straight-neck-serifless"
 eight = "two-circles"
 zero = "slashed-cutout"
+capital-d = "more-rounded-serifless"
 capital-g = "toothless-rounded-serifless-hooked"
 capital-k = "symmetric-connected-serifless"
 a = "double-storey-toothless-rounded"
 b = "toothless-rounded-serifless"
 d = "toothless-rounded-serifless"
+f = "serifless-crossbar-at-x-height"
 g = "single-storey-earless-rounded"
 i = "hooky"
 j = "hooky"
@@ -464,8 +609,6 @@ q = "earless-rounded-straight-serifless"
 r = "earless-rounded-serifless"
 t = "hookless"
 u = "toothless-rounded-serifless"
-y = "straight-turn-serifless"
-capital-eszet = "rounded-serifless"
 lower-lambda = "tailed-turn"
 cyrl-capital-u = "straight-turn-serifless"
 asterisk = "hex-low"
@@ -479,78 +622,50 @@ lig-equal-chain = "without-notch"
 lig-hyphen-chain = "without-notch"
 cyrl-em = "hanging-serifless"
 
-[buildPlans.IovevkaHookyRound.weights.Regular]
-shape = 400
-menu = 400
-css = 400
+[buildPlans.SukIoveMedium.weights.Medium]
+shape = 500
+menu = 500
+css = 500
 
-[buildPlans.IovevkaHookyRound.widths.Normal]
+[buildPlans.SukIoveMedium.widths.Normal]
 shape = 500
 menu = 5
 css = "normal"
 
-[buildPlans.IovevkaHookyRound.slopes.Upright]
+[buildPlans.SukIoveMedium.slopes.Upright]
 angle = 0
 shape = "upright"
 menu = "upright"
 css = "normal"
 
-########################################
-# normal
 
-[buildPlans.Iovevka]
-family = "Iovevka"
-spacing = "fontconfig-mono"
-serifs = "sans"
-noCvSs = true
-exportGlyphNames = false
-noLigation = true
 
-[buildPlans.Iovevka.variants.design]
-one = "base"
-three = "flat-top-serifless"
-six = "open-contour"
-seven = "bend-serifless"
-eight = "two-circles"
-nine = "open-contour"
-zero = "slashed-cutout"
-capital-g = "toothless-rounded-serifless-hooked"
-capital-k = "symmetric-connected-serifless"
-k = "symmetric-connected-serifless"
-u = "toothless-rounded-serifless"
-y = "straight-turn-serifless"
-capital-eszet = "rounded-serifless"
-lower-lambda = "tailed-turn"
-cyrl-capital-u = "straight-turn-serifless"
-asterisk = "hex-low"
-underscore = "above-baseline"
-ampersand = "lower-open"
-at = "compact"
-dollar = "interrupted"
-cent = "open"
-lig-ltgteq = "slanted"
-lig-equal-chain = "without-notch"
-lig-hyphen-chain = "without-notch"
-cyrl-em = "hanging-serifless"
 
-[buildPlans.Iovevka.weights.Regular]
-shape = 400
-menu = 400
-css = 400
 
-[buildPlans.Iovevka.widths.Normal]
-shape = 500
-menu = 5
-css = "normal"
+# Unders are examples
 
-[buildPlans.Iovevka.slopes.Upright]
-angle = 0
-shape = "upright"
-menu = "upright"
-css = "normal"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ########################################
 # IovevkaHooky
+
+
+
+
+
 
 [buildPlans.IovevkaHooky]
 family = "Iovevka"
@@ -607,79 +722,18 @@ shape = "upright"
 menu = "upright"
 css = "normal"
 
-########################################
-# Iovevka-Medium
 
-[buildPlans.IovevkaHookyMix]
-family = "Iovevka"
-spacing = "fontconfig-mono"
-serifs = "sans"
-noCvSs = true
-exportGlyphNames = false
-noLigation = true
 
-[buildPlans.IovevkaHookyMix.variants.design]
-# one = "base"
-three = "flat-top-serifless"
-eight = "two-circles"
-zero = "slashed-cutout"
-capital-g = "toothless-rounded-serifless-hooked"
-capital-j = "serifless"
-capital-k = "symmetric-connected-serifless"
-# capital-m = "slanted-sides-hanging-serifless"
-# capital-u = "toothless-corner-serifless"
-# a = "double-storey-toothless-corner"
-# b = "toothless-corner-serifless"
-# d = "toothless-corner-serifless"
-# g = "single-storey-earless-corner"
-a = "double-storey-toothless-rounded"
-b = "toothless-rounded-serifless"
-d = "toothless-rounded-serifless"
-i = "hooky"
-j = "hooky"
-k = "symmetric-connected-serifless"
-l = "hooky"
-t = "hookless"
-# m = "earless-corner-double-arch-serifless"
-# n = "earless-corner-straight-serifless"
-# p = "earless-corner-serifless"
-# q = "earless-corner-straight-serifless"
-# r = "earless-corner-serifless"
-u = "toothless-rounded-serifless"
-# u = "toothless-corner-serifless"
-y = "straight-turn-serifless"
-capital-eszet = "rounded-serifless"
-lower-lambda = "tailed-turn"
-cyrl-capital-u = "straight-turn-serifless"
-asterisk = "hex-low"
-underscore = "above-baseline"
-ampersand = "lower-open"
-at = "compact"
-dollar = "interrupted"
-cent = "open"
-lig-ltgteq = "slanted"
-lig-equal-chain = "without-notch"
-lig-hyphen-chain = "without-notch"
-cyrl-em = "hanging-serifless"
 
-[buildPlans.IovevkaHookyMix.weights.Regular]
-shape = 400
-menu = 400
-css = 400
 
-[buildPlans.IovevkaHookyMix.widths.Normal]
-shape = 500
-menu = 5
-css = "normal"
-
-[buildPlans.IovevkaHookyMix.slopes.Upright]
-angle = 0
-shape = "upright"
-menu = "upright"
-css = "normal"
 
 ########################################
 # Serif
+
+
+
+
+
 
 [buildPlans.Serif]
 family = "Iovevka"
@@ -740,8 +794,18 @@ shape = "upright"
 menu = "upright"
 css = "normal"
 
+
+
+
+
+
 ########################################
 # Ubuntu
+
+
+
+
+
 
 [buildPlans.Ubuntu]
 family = "Iovevka"
@@ -808,70 +872,3 @@ shape = "upright"
 menu = "upright"
 css = "normal"
 
-########################################
-# Round
-
-[buildPlans.Round]
-family = "Iovevka"
-spacing = "fontconfig-mono"
-serifs = "sans"
-noCvSs = true
-exportGlyphNames = false
-
-[buildPlans.Round.variants.design]
-two = "straight-neck-serifless"
-six = "open-contour"
-seven = "bend-serifless"
-eight = "two-circles"
-nine = "open-contour"
-capital-g = "toothless-rounded-serifless-hooked"
-capital-j = "serifless"
-capital-m = "slanted-sides-hanging-serifless"
-capital-w = "curly-serifless"
-a = "double-storey-toothless-rounded"
-b = "toothless-rounded-serifless"
-d = "toothless-rounded-serifless"
-f = "tailed"
-g = "single-storey-earless-rounded"
-i = "hooky"
-l = "hooky"
-m = "earless-rounded-double-arch-serifless"
-n = "earless-rounded-straight-serifless"
-p = "earless-rounded-serifless"
-q = "earless-rounded-straight-serifless"
-r = "earless-rounded-serifless"
-u = "toothless-rounded-serifless"
-y = "straight-turn-serifless"
-capital-eszet = "rounded-serifless"
-lower-lambda = "tailed-turn"
-cyrl-capital-u = "straight-turn-serifless"
-asterisk = "hex-low"
-underscore = "above-baseline"
-ampersand = "lower-open"
-at = "compact"
-dollar = "interrupted"
-cent = "bar-interrupted"
-lig-ltgteq = "slanted"
-lig-equal-chain = "without-notch"
-lig-hyphen-chain = "without-notch"
-
-  [buildPlans.Round.ligations]
-  inherits = "dlig"
-
-[buildPlans.Round.weights.Regular]
-shape = 400
-menu = 400
-css = 400
-
-[buildPlans.Round.widths.Normal]
-shape = 500
-menu = 5
-css = "normal"
-
-[buildPlans.Round.slopes.Upright]
-angle = 0
-shape = "upright"
-menu = "upright"
-css = "normal"
-
-# number-sign = "slanted"
