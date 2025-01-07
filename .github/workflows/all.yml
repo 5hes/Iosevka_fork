@@ -25,10 +25,10 @@ jobs:
     - name: Create a new tag
       id: create_tag
       run: |
-        # cd iosevka
-        # TAG_NAME="v0.0.2.9"  # 这里设置你想要的标签名
-        # git tag $TAG_NAME
-        # git push origin $TAG_NAME
+        cd iosevka
+        TAG_NAME="v0.0.3.0"  # 这里设置你想要的标签名
+        git tag $TAG_NAME
+        git push origin $TAG_NAME
 
 
     - name: Use Node.js
@@ -52,14 +52,17 @@ jobs:
       run: |
         npm install
         npm audit fix
-        npm run build -- ttf::Iovevka
+        npm run build -- ttf::Iove
+        npm run build -- ttf::SukIove
         npm run build -- ttf::Iover
-        npm run build -- ttf::IovevkaHooky
-        npm run build -- ttf::IovevkaHookyMix
-        npm run build -- ttf::IovevkaHookyRound
-        npm run build -- ttf::Serif
-        npm run build -- ttf::Ubuntu
-        npm run build -- ttf::Round
+        npm run build -- ttf::Gold
+        npm run build -- ttf::Short
+        npm run build -- ttf::IoveMedium
+        npm run build -- ttf::SukIoveMedium
+        npm run build -- ttf::IoverMedium
+        npm run build -- ttf::GoldMedium
+        npm run build -- ttf::ShortMedium
+        
 
 #    - name: patch-nerd-hint
 #      shell: bash
@@ -102,51 +105,66 @@ jobs:
         cp rename iosevka/dist/Round/TTF-Unhinted/
         cp rename iosevka/dist/Iover/TTF-Unhinted/
         
-    - name: Rename-Iovevka
+    - name: Rename-Iover
       run: |
+        export repo=$PWD
         cd iosevka/dist/Iover/TTF-Unhinted/
-        bash rename    
-       
-    - name: Rename-Iovevka
-      run: |
-        cd iosevka/dist/Iovevka/TTF-Unhinted/
+        cp $repo/rename .
+        bash rename
+        cd $repo
+        cd iosevka/dist/IoverMedium/TTF-Unhinted/
+        cp $repo/rename .
         bash rename
 
-    - name: Rename-IovevkaHooky
+    - name: Rename-Iove
       run: |
-        cd iosevka/dist/IovevkaHooky/TTF-Unhinted/
+        export repo=$PWD
+        cd iosevka/dist/Iove/TTF-Unhinted/
+        cp $repo/rename .
+        bash rename
+        cd $repo
+        cd iosevka/dist/IoveMedium/TTF-Unhinted/
+        cp $repo/rename .
         bash rename
 
-    - name: Rename-IovevkaHookyRound
+    - name: Rename-Gold
       run: |
-        cd iosevka/dist/IovevkaHookyRound/TTF-Unhinted/
+        export repo=$PWD
+        cd iosevka/dist/Gold/TTF-Unhinted/
+        cp $repo/rename .
+        bash rename
+        cd $repo
+        cd iosevka/dist/GoldMedium/TTF-Unhinted/
+        cp $repo/rename .
         bash rename
 
-    - name: Rename-IovevkaHookyMix
+    - name: Rename-Short
       run: |
-        cd iosevka/dist/IovevkaHookyMix/TTF-Unhinted/
+        export repo=$PWD
+        cd iosevka/dist/Short/TTF-Unhinted/
+        cp $repo/rename .
+        bash rename
+        cd $repo
+        cd iosevka/dist/ShortMedium/TTF-Unhinted/
+        cp $repo/rename .
         bash rename
 
-    - name: Rename-Ubuntu
+    - name: Rename-SukIove
       run: |
-        cd iosevka/dist/Ubuntu/TTF-Unhinted/
+        export repo=$PWD
+        cd iosevka/dist/SukIove/TTF-Unhinted/
+        cp $repo/rename .
         bash rename
-
-    - name: Rename-Serif
-      run: |
-        cd iosevka/dist/Serif/TTF-Unhinted/
-        bash rename
-
-    - name: Rename-Round
-      run: |
-        cd iosevka/dist/Round/TTF-Unhinted/
+        cd $repo
+        cd iosevka/dist/SukIove/TTF-Unhinted/
+        cp $repo/rename .
         bash rename
         
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: v0.0.2.9
-        name: Iovevka-4.0-alpha-3(all)
+        tag_name: v0.0.3.0
+        name: Iovevka-4.0-alpha-5(all)
         #tag_name: ${{ github.ref }}
         #name: ${{ github.ref }}
         # body: 精简大量没必要的配置
@@ -154,23 +172,26 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          ./iosevka/dist/Iovevka/TTF/*.ttf
-          ./iosevka/dist/IovevkaHooky/TTF/*.ttf
-          ./iosevka/dist/IovevkaHookyRound/TTF/*.ttf
-          ./iosevka/dist/IovevkaHookyMix/TTF/*.ttf
-          ./iosevka/dist/Ubuntu/TTF/*.ttf
-          ./iosevka/dist/Serif/TTF/*.ttf
-          ./iosevka/dist/Round/TTF/*.ttf
+          ./iosevka/dist/Iove/TTF/*.ttf
           ./iosevka/dist/Iover/TTF/*.ttf
-          ./iosevka/dist/Iovevka/TTF-Unhinted/*.ttf
-          ./iosevka/dist/IovevkaHooky/TTF-Unhinted/*.ttf
-          ./iosevka/dist/IovevkaHookyMix/TTF-Unhinted/*.ttf
-          ./iosevka/dist/Ubuntu/TTF-Unhinted/*.ttf
-          ./iosevka/dist/Serif/TTF-Unhinted/*.ttf
-          ./iosevka/dist/Round/TTF-Unhinted/*.ttf
-          ./iosevka/dist/IovevkaHookyRound/TTF-Unhinted/*.ttf
+          ./iosevka/dist/SukIove/TTF/*.ttf
+          ./iosevka/dist/Gold/TTF/*.ttf
+          ./iosevka/dist/Short/TTF/*.ttf
+          ./iosevka/dist/IoveMeidum/TTF/*.ttf
+          ./iosevka/dist/IoverMedium/TTF/*.ttf
+          ./iosevka/dist/SukIoveMedium/TTF/*.ttf
+          ./iosevka/dist/GoldMedium/TTF/*.ttf
+          ./iosevka/dist/ShortMedium/TTF/*.ttf
+          ./iosevka/dist/Iove/TTF-Unhinted/*.ttf
           ./iosevka/dist/Iover/TTF-Unhinted/*.ttf
-
+          ./iosevka/dist/SukIove/TTF-Unhinted/*.ttf
+          ./iosevka/dist/Gold/TTF-Unhinted/*.ttf
+          ./iosevka/dist/Short/TTF-Unhinted/*.ttf
+          ./iosevka/dist/IoveMeidum/TTF-Unhinted/*.ttf
+          ./iosevka/dist/IoverMedium/TTF-Unhinted/*.ttf
+          ./iosevka/dist/SukIoveMedium/TTF-Unhinted/*.ttf
+          ./iosevka/dist/GoldMedium/TTF-Unhinted/*.ttf
+          ./iosevka/dist/ShortMedium/TTF-Unhinted/*.ttf
 
 
 
