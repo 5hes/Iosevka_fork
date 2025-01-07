@@ -87,13 +87,10 @@ jobs:
     - name: Make rename script
       shell: bash
       run: |
-        cd iosevka/dist/Iovevka/TTF-Unhinted/
         echo 'for file in *.ttf; do' >> rename
         echo '    mv "$file" "${file%.ttf}-Unhinted.ttf"' >> rename
         echo 'done' >> rename
         chmod +x rename
-        cp rename ../../../../
-        cd ../../../../
         
     - name: Rename-Iover
       run: |
