@@ -309,7 +309,7 @@ ascender = '(500 - (default_sb * 2)) * 1.618033988749894848 * 1.6180339887498948
 leading = '(500 - (default_sb * 2)) * 1.618033988749894848 * 1.618033988749894848 * 1.618033988749894848'
 parenSize = '(500 - (default_sb * 2)) * 1.618033988749894848 * 1.618033988749894848'
 
-[buildPlans.GoldMediun.variants.design]
+[buildPlans.GoldMedium.variants.design]
 one = "base"
 two = "straight-neck-serifless"
 three = "flat-top-serifless"
