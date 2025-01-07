@@ -1,6 +1,7 @@
-name: build-release
+name: all-build-release
 
 on:
+  push:
   workflow_dispatch:
     inputs:
       release:
@@ -11,10 +12,6 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        fontName: ["Iosevka"]
 
     steps:
     - name: checkout
