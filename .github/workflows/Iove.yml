@@ -1,7 +1,6 @@
 name: Iove build
 
 on:
-  push:
   workflow_dispatch:
     inputs:
       release:
