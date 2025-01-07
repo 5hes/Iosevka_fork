@@ -94,13 +94,6 @@ jobs:
         chmod +x rename
         cp rename ../../../../
         cd ../../../../
-        cp rename iosevka/dist/IovevkaHooky/TTF-Unhinted/
-        cp rename iosevka/dist/IovevkaHookyRound/TTF-Unhinted/
-        cp rename iosevka/dist/IovevkaHookyMix/TTF-Unhinted/
-        cp rename iosevka/dist/Ubuntu/TTF-Unhinted/
-        cp rename iosevka/dist/Serif/TTF-Unhinted/
-        cp rename iosevka/dist/Round/TTF-Unhinted/
-        cp rename iosevka/dist/Iover/TTF-Unhinted/
         
     - name: Rename-Iover
       run: |
