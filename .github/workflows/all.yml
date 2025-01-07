@@ -165,10 +165,6 @@ jobs:
       with:
         tag_name: v0.0.3.0
         name: Iovevka-4.0-alpha-5(all)
-        #tag_name: ${{ github.ref }}
-        #name: ${{ github.ref }}
-        # body: 精简大量没必要的配置
-        #body_path: CHANGELOG.txt
         draft: false
         prerelease: false
         files: |
