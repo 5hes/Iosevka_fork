@@ -164,9 +164,7 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         tag_name: v0.0.3.0
-        name: Iovevka-4.0-alpha-5(all)
-        draft: false
-        prerelease: false
+        name: Iovevka-4.0-alpha-5 ALL
         files: |
           ./iosevka/dist/Kawaii/TTF/*.ttf
           ./iosevka/dist/KawaiiMedium/TTF/*.ttf
