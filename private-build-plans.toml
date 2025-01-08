@@ -330,11 +330,11 @@ exportGlyphNames = false
 noLigation = true
 
 [buildPlans.KawaiiMedium.metricOverride]
-xHeight = 'default_cap * 0.707106781186547524'
-cap = 'default_cap * 0.866025403784438646'
-ascender = 'default_ascender * 0.866025403784438646'
-leading = 'default_cap * 1.401258538444073544'
-parenSize = 'default_cap * 1.144122805635368595'
+xHeight = '(500 - (default_sb * 2)) * 0.816496580927726032'
+cap = '(500 - (default_sb * 2)) * 1.732050807568877293'
+ascender = '(500 - (default_sb * 2)) * 1.732050807568877293'
+leading = '(500 - (default_sb * 2)) * 1.732050807568877293 * 1.618033988749894848'
+parenSize = 'default_cap * 1.321119219639139872'
 
 [buildPlans.KawaiiMedium.variants.design]
 one = "base"
