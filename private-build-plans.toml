@@ -2,6 +2,7 @@
 # test
 # one = "base"
 # three = "flat-top-serifless"
+# six = "closed-contour"
 # eight = "two-circles"
 # zero = "slashed-cutout"
 # f = "serifless-crossbar-at-x-height"
@@ -268,7 +269,8 @@ noLigation = true
 xHeight = 'default_cap * 0.5'
 leading = 'default_cap * 1.618033988749894848'
 parenSize = 'default_cap * 0.809016994374947424'
-sb = 'default_sb * 2'
+smallArchDepth = 'default_smallArchDepth * 10'
+archDepth = 'default_archDepth * 10'
 
 [buildPlans.Kawaii.variants.design]
 one = "base"
@@ -330,7 +332,8 @@ cap = '(500 - (default_sb * 2)) * 2'
 ascender = '(500 - (default_sb * 2)) * 2'
 leading = '(500 - (default_sb * 2)) * 2'
 parenSize = '(500 - (default_sb * 2)) * 2'
-sb = 'default_sb * 2'
+smallArchDepth = 'default_smallArchDepth * 10'
+archDepth = 'default_archDepth * 10'
 
 [buildPlans.KawaiiMedium.variants.design]
 one = "base"
@@ -406,9 +409,7 @@ parenSize = 'default_xHeight * 1.144122805635368595 * 1.618033988749894848'
 one = "base"
 two = "straight-neck-serifless"
 three = "flat-top-serifless"
-six = 'closed-contour'
 eight = "two-circles"
-nine = 'closed-contour'
 zero = "slashed-cutout"
 capital-d = "more-rounded-serifless"
 capital-g = "toothless-rounded-serifless-hooked"
@@ -469,9 +470,7 @@ parenSize = '(500 - (default_sb * 2)) * 1.618033988749894848 * 1.618033988749894
 one = "base"
 two = "straight-neck-serifless"
 three = "flat-top-serifless"
-six = 'closed-contour'
 eight = "two-circles"
-nine = 'closed-contour'
 zero = "slashed-cutout"
 capital-d = "more-rounded-serifless"
 capital-g = "toothless-rounded-serifless-hooked"
@@ -544,6 +543,8 @@ zero = "slashed-cutout"
 capital-d = "more-rounded-serifless"
 capital-g = "toothless-rounded-serifless-hooked"
 capital-k = "symmetric-connected-serifless"
+f = "flat-hook-serifless"
+g = "single-storey-flat-hook-serifless"
 k = "symmetric-connected-serifless"
 u = "toothless-rounded-serifless"
 capital-eszet = "rounded-serifless"
@@ -605,6 +606,8 @@ zero = "slashed-cutout"
 capital-d = "more-rounded-serifless"
 capital-g = "toothless-rounded-serifless-hooked"
 capital-k = "symmetric-connected-serifless"
+f = "flat-hook-serifless"
+g = "single-storey-flat-hook-serifless"
 k = "symmetric-connected-serifless"
 u = "toothless-rounded-serifless"
 capital-eszet = "rounded-serifless"
