@@ -40,7 +40,7 @@ jobs:
       run: |
         npm install
         npm audit fix
-        npm run build -- ttf-unhinted::Test
+        npm run build -- ttf-Unhinted::Test
                 
     - name: Check info
       run: |
@@ -52,7 +52,7 @@ jobs:
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: v0.0.1-test
+        tag_name: v0.0.3.0
         # name: test build
         body: l Ioνe yoυ
         files: |
