@@ -41,7 +41,7 @@ jobs:
       run: |
         npm install
         npm audit fix
-        npm run build -- ttf-Unhinted::Test
+        npm run build -- ttf-unhinted::Test
                 
     - name: Check info
       run: |
