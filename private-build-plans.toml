@@ -71,6 +71,11 @@ shape = 340
 menu = 340
 css = 340
 
+[buildPlans.Test.weights.Thin]
+shape = 300
+menu = 300
+css = 300
+
 [buildPlans.Test.widths.Normal]
 shape = 500
 menu = 5
