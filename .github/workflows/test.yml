@@ -52,8 +52,8 @@ jobs:
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: v0.0.3.0
-        # name: test build
+        tag_name: v0.0.3.1
+        name: Iovevka-32.5.0 ALL
         body: l Ioνe yoυ
         files: |
           ./iosevka/dist/Test/TTF-Unhinted/*.ttf
