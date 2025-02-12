@@ -1,7 +1,7 @@
 name: all-build-release
 
 on:
-  Test:
+  push:
   workflow_dispatch:
     inputs:
       release:
