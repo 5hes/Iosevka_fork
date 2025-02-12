@@ -178,6 +178,7 @@ jobs:
         tag_name: v0.0.3.1
         name: Iovevka-32.5.0 ALL
         files: |
+          ./iosevka/dist/Test/TTF/*.ttf
           ./iosevka/dist/Kawaii/TTF/*.ttf
           ./iosevka/dist/KawaiiMedium/TTF/*.ttf
           ./iosevka/dist/Iove/TTF/*.ttf
@@ -190,6 +191,7 @@ jobs:
           ./iosevka/dist/SukIoveMedium/TTF/*.ttf
           ./iosevka/dist/GoldMedium/TTF/*.ttf
           ./iosevka/dist/ShortMedium/TTF/*.ttf
+          ./iosevka/dist/Test/TTF-Unhinted/*.ttf
           ./iosevka/dist/Kawaii/TTF-Unhinted/*.ttf
           ./iosevka/dist/KawaiiMedium/TTF-Unhinted/*.ttf
           ./iosevka/dist/Iove/TTF-Unhinted/*.ttf
