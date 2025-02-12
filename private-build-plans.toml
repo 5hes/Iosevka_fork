@@ -88,6 +88,72 @@ menu = "upright"
 css = "normal"
 
 
+
+
+
+[buildPlans.TestMedium]
+family = "Iover"
+spacing = "fontconfig-mono"
+serifs = "sans"
+noCvSs = true
+exportGlyphNames = false
+noLigation = true
+
+[buildPlans.TestMedium.metricOverride]
+xHeight = '(500 - (default_sb * 2)) * 1.414213562373095048'
+cap = '(500 - (default_sb * 2)) * 2'
+ascender = '(500 - (default_sb * 2)) * 2'
+leading = '(500 - (default_sb * 2)) * 2 * 1.618033988749894848'
+parenSize = '(500 - (default_sb * 2)) * 1.414213562373095048 * 1.618033988749894848'
+
+[buildPlans.TestMedium.variants.design]
+two = "straight-neck-serifless"
+five = "upright-flat-serifless"
+zero = "oval-dotted"
+capital-d = "more-rounded-serifless"
+# capital-i = "short-serifed"
+capital-g = "toothless-rounded-serifless-hooked"
+capital-k = "symmetric-connected-serifless"
+i = "hooky"
+k = "symmetric-connected-serifless"
+l = "zshaped"
+# t = "bent-hook-asymmetric"
+# t = "hookless"
+u = "toothless-rounded-serifless"
+capital-eszet = "rounded-serifless"
+# lower-lambda = "tailed-turn"
+cyrl-capital-u = "straight-turn-serifless"
+asterisk = "hex-low"
+underscore = "above-baseline"
+# ampersand = "lower-open"
+at = "compact"
+dollar = "interrupted"
+cent = "open"
+lig-ltgteq = "slanted"
+lig-equal-chain = "without-notch"
+lig-hyphen-chain = "without-notch"
+cyrl-em = "hanging-serifless"
+
+[buildPlans.TestMedium.weights.Medium]
+shape = 500
+menu = 500
+css = 500
+
+[buildPlans.TestMedium.widths.Normal]
+shape = 500
+menu = 5
+css = "normal"
+
+[buildPlans.TestMedium.slopes.Upright]
+angle = 0
+shape = "upright"
+menu = "upright"
+css = "normal"
+
+
+
+
+
 [buildPlans.Iover]
 family = "Iover"
 spacing = "fontconfig-mono"
