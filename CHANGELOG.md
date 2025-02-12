@@ -1,5 +1,67 @@
 ## Modifications since last major version
 
+### 32.5.0
+
+* Add variant selector for decorative angle brackets (U+276C...U+2771) (#2603, #2623).
+* Refine shape of the following characters:
+  - GREEK PHI SYMBOL (`U+03D5`).
+  - CYRILLIC SMALL LETTER EF (`U+0444`).
+  - ARMENIAN CAPITAL LETTER KEH (`U+0554`).
+  - ARMENIAN SMALL LETTER CA (`U+056E`).
+  - ARMENIAN SMALL LETTER KEH (`U+0584`).
+  - VERTICAL ZIGZAG LINE (`U+299A`).
+  - LEFT WIGGLY FENCE (`U+29D8`).
+  - RIGHT WIGGLY FENCE (`U+29D9`).
+  - LEFT DOUBLE WIGGLY FENCE (`U+29DA`).
+  - RIGHT DOUBLE WIGGLY FENCE (`U+29DB`).
+  - HORIZONTAL RESISTOR SEGMENT (`U+1CC09`).
+  - VERTICAL RESISTOR SEGMENT (`U+1CC0A`).
+  - HORIZONTAL ZIGZAG LINE (`U+1CEB0`).
+* Add italic form for Cyrillic Small Letter Ghe with Upturn (`ґ`).
+* Add characters:
+  - ELECTRIC ARROW (`U+2301`).
+  - UP ARROWHEAD (`U+2303`).
+  - DOWN ARROWHEAD (`U+2304`).
+  - POSITION INDICATOR (`U+2316`).
+  - UP ARROWHEAD BETWEEN TWO HORIZONTAL BARS (`U+2324`).
+  - OPTION KEY (`U+2325`).
+  - CYLINDRICITY (`U+232D`).
+  - ALL AROUND-PROFILE (`U+232E`).
+  - TOTAL RUNOUT (`U+2330`).
+  - DIMENSION ORIGIN (`U+2331`).
+  - ENTER SYMBOL (`U+2386`).
+  - ALTERNATIVE KEY SYMBOL (`U+2387`).
+  - SQUARE POSITION INDICATOR (`U+2BD0`).
+ * Descriptions of stylistic sets are added to font files (#2664).
+
+
+### 32.4.0
+
+* Add `curved` variant for `¶` (#2045).
+* Add `top-cut` variants for `a`/`g`/`q`.
+* Add `bottom-cut` variants for `b`.
+* Refine shape of `Չ`.
+* Make certain characters slightly wider under Quasi-Proportional. Affected characters:
+  - LATIN SMALL LETTER SCHWA WITH HOOK (`U+025A`).
+  - LATIN SMALL LETTER REVERSED OPEN E WITH HOOK (`U+025D`).
+  - LATIN LETTER SMALL CAPITAL OE (`U+0276`).
+  - LATIN LETTER SMALL CAPITAL AE (`U+1D01`).
+  - LATIN LETTER SMALL CAPITAL W (`U+1D21`).
+  - TELEPHONE SIGN (`U+2121`).
+  - FACSIMILE SIGN (`U+213B`).
+  - MODIFIER LETTER SMALL CAPITAL AA (`U+01780`).
+  - MODIFIER LETTER SMALL CAPITAL OE (`U+107A3`).
+* Add characters:
+  - NEW SHEQEL SIGN (`U+20AA`) (#2097).
+  - TURKISH LIRA SIGN (`U+20BA`) (#2097).
+  - MANAT SIGN (`U+20BC`) (#2097).
+  - LARI SIGN (`U+20BE`) (#2097).
+  - VIEWDATA SQUARE (`U+2317`).
+  - PLACE OF INTEREST SIGN (`U+2318`).
+  - CURVED STEM PARAGRAPH SIGN ORNAMENT (`U+2761`).
+* Add new spacing option `wide-mosaic` for custom build (#2637).
+
+
 ### 32.3.1
 
 * Make certain characters slightly narrower under Quasi-Proportional. Affected characters:
