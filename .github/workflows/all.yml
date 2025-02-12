@@ -1,6 +1,7 @@
 name: all-build-release
 
 on:
+  push:
   workflow_dispatch:
     inputs:
       release:
