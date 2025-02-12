@@ -50,6 +50,7 @@ jobs:
         npm install
         npm audit fix
         npm run build -- ttf::Test
+        npm run build -- ttf::TestMedium
         npm run build -- ttf::Kawaii
         npm run build -- ttf::Iove
         npm run build -- ttf::SukIove
@@ -179,6 +180,7 @@ jobs:
         name: Iovevka-32.5.0 ALL
         files: |
           ./iosevka/dist/Test/TTF/*.ttf
+          ./iosevka/dist/TestMedium/TTF/*.ttf
           ./iosevka/dist/Kawaii/TTF/*.ttf
           ./iosevka/dist/KawaiiMedium/TTF/*.ttf
           ./iosevka/dist/Iove/TTF/*.ttf
@@ -192,6 +194,7 @@ jobs:
           ./iosevka/dist/GoldMedium/TTF/*.ttf
           ./iosevka/dist/ShortMedium/TTF/*.ttf
           ./iosevka/dist/Test/TTF-Unhinted/*.ttf
+          ./iosevka/dist/TestMedium/TTF-Unhinted/*.ttf
           ./iosevka/dist/Kawaii/TTF-Unhinted/*.ttf
           ./iosevka/dist/KawaiiMedium/TTF-Unhinted/*.ttf
           ./iosevka/dist/Iove/TTF-Unhinted/*.ttf
