@@ -22,7 +22,7 @@ jobs:
       id: create_tag
       run: |
         cd iosevka
-        # TAG_NAME="v0.0.3.0"  # 这里设置你想要的标签名
+        TAG_NAME="v0.0.3.1"  # 这里设置你想要的标签名
         # git tag $TAG_NAME
         # git push origin $TAG_NAME
 
@@ -48,6 +48,7 @@ jobs:
       run: |
         npm install
         npm audit fix
+        npm run build -- ttf::Test
         npm run build -- ttf::Kawaii
         npm run build -- ttf::Iove
         npm run build -- ttf::SukIove
@@ -92,8 +93,19 @@ jobs:
         echo '    mv "$file" "${file%.ttf}-Unhinted.ttf"' >> rename
         echo 'done' >> rename
         chmod +x rename
-        
-    - name: Rename-Iover
+
+    - name: Rename-Test
+      run: |
+        export repo=$PWD
+        cd iosevka/dist/Test/TTF-Unhinted/
+        cp $repo/rename .
+        bash rename
+        cd $repo
+        cd iosevka/dist/TestMedium/TTF-Unhinted/
+        cp $repo/rename .
+        bash rename
+     
+    - name: Rename-Kawaii
       run: |
         export repo=$PWD
         cd iosevka/dist/Kawaii/TTF-Unhinted/
@@ -162,8 +174,8 @@ jobs:
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: v0.0.3.0
-        name: Iovevka-4.0-alpha-5 ALL
+        tag_name: v0.0.3.1
+        name: Iovevka-32.5.0 ALL
         files: |
           ./iosevka/dist/Kawaii/TTF/*.ttf
           ./iosevka/dist/KawaiiMedium/TTF/*.ttf
